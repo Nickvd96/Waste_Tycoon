@@ -19,6 +19,10 @@ config/name="Tycoon Game"
 run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Save="*res://Save.gd"
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
