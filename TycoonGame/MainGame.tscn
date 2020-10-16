@@ -117,11 +117,9 @@ __meta__ = {
 }
 
 [node name="PlasticTimer" type="Timer" parent="."]
-wait_time = 10.0
 autostart = true
 
 [node name="GFTTimer" type="Timer" parent="."]
-wait_time = 2.0
 autostart = true
 
 [node name="PaperTimer" type="Timer" parent="."]

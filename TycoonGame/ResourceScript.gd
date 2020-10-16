@@ -19,14 +19,29 @@ func _ready():
 func _on_House1_pressed():
 	GlobalScript.Plastic += 1
 	$ControlFactory1/Plasticlabel.text = str(GlobalScript.Plastic)
+	
+	var click = load("res://PopupClickMessage.tscn")
+	var clickInstance = click.instance()
+	clickInstance.position = get_local_mouse_position()
+	add_child(clickInstance)
 
 func _on_House2_pressed():
 	GlobalScript.GFT += 1
 	$ControlFactory2/GFTLabel.text = str (GlobalScript.GFT)
+	
+	var click = load("res://PopupClickMessage.tscn")
+	var clickInstance = click.instance()
+	clickInstance.position = get_local_mouse_position()
+	add_child(clickInstance)
 
 func _on_House3_pressed():
 	GlobalScript.Paper += 1
 	$ControlFactory3/Paperlabel.text = str(GlobalScript.Paper)
+	
+	var click = load("res://PopupClickMessage.tscn")
+	var clickInstance = click.instance()
+	clickInstance.position = get_local_mouse_position()
+	add_child(clickInstance)
 
 #TIMERS PER SEC
 #
