@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Tycoon Game"
-run/main_scene="res://MainGame.tscn"
+run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
 
 [rendering]
