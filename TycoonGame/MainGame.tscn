@@ -88,6 +88,10 @@ autostart = true
 [node name="GFTTimer" type="Timer" parent="."]
 wait_time = 2.0
 autostart = true
+
+[node name="PaperTimer" type="Timer" parent="."]
+autostart = true
 [connection signal="pressed" from="House1" to="." method="_on_House1_pressed"]
 [connection signal="timeout" from="PlasticTimer" to="." method="_on_PlasticTimer_timeout"]
 [connection signal="timeout" from="GFTTimer" to="." method="_on_GFTTimer_timeout"]
+[connection signal="timeout" from="PaperTimer" to="." method="_on_PaperTimer_timeout"]
