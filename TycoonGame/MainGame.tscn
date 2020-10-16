@@ -65,7 +65,7 @@ margin_top = 42.0
 margin_right = 217.0
 margin_bottom = 56.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Aantal p resources"
+text = "Aantal plastic"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -91,7 +91,11 @@ autostart = true
 
 [node name="PaperTimer" type="Timer" parent="."]
 autostart = true
+
+[node name="SaveFile" type="Timer" parent="."]
+autostart = true
 [connection signal="pressed" from="House1" to="." method="_on_House1_pressed"]
 [connection signal="timeout" from="PlasticTimer" to="." method="_on_PlasticTimer_timeout"]
 [connection signal="timeout" from="GFTTimer" to="." method="_on_GFTTimer_timeout"]
 [connection signal="timeout" from="PaperTimer" to="." method="_on_PaperTimer_timeout"]
+[connection signal="timeout" from="SaveFile" to="." method="_on_SaveFile_timeout"]
