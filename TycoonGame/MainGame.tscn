@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Img/Citybackground.jpg" type="Texture" id=1]
 [ext_resource path="res://Img/House1.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Img/PlasticFactorySign.png" type="Texture" id=8]
 [ext_resource path="res://Img/GFTFactorySign.png" type="Texture" id=9]
 [ext_resource path="res://Img/PaperFactorySign.png" type="Texture" id=10]
+[ext_resource path="res://Img/PopMenuFactory1.png" type="Texture" id=11]
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 5 )
@@ -86,6 +87,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="PopupMenu" type="PopupMenu" parent="ControlFactory1"]
+visible = true
+margin_right = 20.0
+margin_bottom = 20.0
+
+[node name="Sprite" type="Sprite" parent="ControlFactory1/PopupMenu"]
+position = Vector2( 85.7499, 301.553 )
+scale = Vector2( 0.0628421, 0.0628421 )
+texture = ExtResource( 11 )
+
 [node name="ControlFactory2" type="Control" parent="."]
 margin_left = 387.0
 margin_top = 107.0
@@ -115,18 +126,6 @@ text = "Aantal GFT resources"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="PlasticTimer" type="Timer" parent="."]
-autostart = true
-
-[node name="GFTTimer" type="Timer" parent="."]
-autostart = true
-
-[node name="PaperTimer" type="Timer" parent="."]
-autostart = true
-
-[node name="SaveResourcesPerSec" type="Timer" parent="."]
-autostart = true
 
 [node name="ControlFactory3" type="Control" parent="."]
 margin_left = 674.0
@@ -158,11 +157,23 @@ texture_pressed = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="PlasticTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="GFTTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="PaperTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="SaveResourcesPerSec" type="Timer" parent="."]
+autostart = true
 [connection signal="pressed" from="ControlFactory1/House1" to="." method="_on_House1_pressed"]
 [connection signal="pressed" from="ControlFactory2/House2" to="." method="_on_House2_pressed"]
+[connection signal="pressed" from="ControlFactory3/House3" to="." method="_on_House3_pressed"]
+[connection signal="pressed" from="ControlFactory3/House3" to="." method="_on_TextureButton_pressed"]
 [connection signal="timeout" from="PlasticTimer" to="." method="_on_PlasticTimer_timeout"]
 [connection signal="timeout" from="GFTTimer" to="." method="_on_GFTTimer_timeout"]
 [connection signal="timeout" from="PaperTimer" to="." method="_on_PaperTimer_timeout"]
 [connection signal="timeout" from="SaveResourcesPerSec" to="." method="_on_SaveResourcesPerSec_timeout"]
-[connection signal="pressed" from="ControlFactory3/House3" to="." method="_on_House3_pressed"]
-[connection signal="pressed" from="ControlFactory3/House3" to="." method="_on_TextureButton_pressed"]
