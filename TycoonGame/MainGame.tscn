@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Img/Citybackground.jpg" type="Texture" id=1]
 [ext_resource path="res://Img/House1.png" type="Texture" id=2]
@@ -7,6 +7,9 @@
 [ext_resource path="res://ResourceScript.gd" type="Script" id=5]
 [ext_resource path="res://Img/PaperResource.png" type="Texture" id=6]
 [ext_resource path="res://Img/GFTResources.png" type="Texture" id=7]
+[ext_resource path="res://Img/PlasticFactorySign.png" type="Texture" id=8]
+[ext_resource path="res://Img/GFTFactorySign.png" type="Texture" id=9]
+[ext_resource path="res://Img/PaperFactorySign.png" type="Texture" id=10]
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 5 )
@@ -37,46 +40,78 @@ scale = Vector2( 0.099322, 0.099322 )
 texture = ExtResource( 6 )
 offset = Vector2( -484.499, -313.037 )
 
-[node name="House1" type="TextureButton" parent="."]
-margin_left = 443.492
-margin_top = 381.756
-margin_right = 617.492
-margin_bottom = 511.756
+[node name="SignFactory1" type="Sprite" parent="UI"]
+position = Vector2( 76.4837, 483.023 )
+scale = Vector2( 0.0373424, 0.0373424 )
+texture = ExtResource( 8 )
+
+[node name="SignFactory2" type="Sprite" parent="UI"]
+position = Vector2( 329.785, 431.887 )
+scale = Vector2( 0.0373424, 0.0373424 )
+texture = ExtResource( 9 )
+
+[node name="SignFactory3" type="Sprite" parent="UI"]
+position = Vector2( 634.222, 459.239 )
+scale = Vector2( 0.0373424, 0.0373424 )
+texture = ExtResource( 10 )
+
+[node name="ControlFactory1" type="Control" parent="."]
+margin_left = 106.0
+margin_top = 109.0
+margin_right = 278.0
+margin_bottom = 511.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="House1" type="TextureButton" parent="ControlFactory1"]
+margin_left = 0.276886
+margin_top = 272.299
+margin_right = 174.277
+margin_bottom = 402.299
 texture_normal = ExtResource( 2 )
 texture_pressed = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="GFTLabel" type="Label" parent="."]
-margin_left = 290.0
-margin_top = 42.0
-margin_right = 425.0
-margin_bottom = 56.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Aantal GFT resources"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Plasticlabel" type="Label" parent="."]
-margin_left = 82.0
-margin_top = 42.0
-margin_right = 217.0
-margin_bottom = 56.0
+[node name="Plasticlabel" type="Label" parent="ControlFactory1"]
+margin_left = -24.7872
+margin_top = -66.122
+margin_right = 110.213
+margin_bottom = -52.122
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Aantal plastic"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Paperlabel" type="Label" parent="."]
-margin_left = 508.0
-margin_top = 40.0
-margin_right = 643.0
-margin_bottom = 54.0
+[node name="ControlFactory2" type="Control" parent="."]
+margin_left = 387.0
+margin_top = 107.0
+margin_right = 558.0
+margin_bottom = 503.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="House2" type="TextureButton" parent="ControlFactory2"]
+margin_top = 271.22
+margin_right = 174.0
+margin_bottom = 401.22
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GFTLabel" type="Label" parent="ControlFactory2"]
+margin_left = -107.499
+margin_top = -65.9556
+margin_right = 27.5013
+margin_bottom = -51.9556
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Aantal papier"
+text = "Aantal GFT resources"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -94,8 +129,42 @@ autostart = true
 
 [node name="SaveResourcesPerSec" type="Timer" parent="."]
 autostart = true
-[connection signal="pressed" from="House1" to="." method="_on_House1_pressed"]
+
+[node name="ControlFactory3" type="Control" parent="."]
+margin_left = 674.0
+margin_top = 93.0
+margin_right = 849.0
+margin_bottom = 506.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Paperlabel" type="Label" parent="ControlFactory3"]
+margin_left = -143.685
+margin_top = -56.3258
+margin_right = -8.68536
+margin_bottom = -42.3258
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Aantal papier"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="House3" type="TextureButton" parent="ControlFactory3"]
+margin_left = 2.3783
+margin_top = 282.085
+margin_right = 176.378
+margin_bottom = 412.085
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="ControlFactory1/House1" to="." method="_on_House1_pressed"]
+[connection signal="pressed" from="ControlFactory2/House2" to="." method="_on_House2_pressed"]
 [connection signal="timeout" from="PlasticTimer" to="." method="_on_PlasticTimer_timeout"]
 [connection signal="timeout" from="GFTTimer" to="." method="_on_GFTTimer_timeout"]
 [connection signal="timeout" from="PaperTimer" to="." method="_on_PaperTimer_timeout"]
 [connection signal="timeout" from="SaveResourcesPerSec" to="." method="_on_SaveResourcesPerSec_timeout"]
+[connection signal="pressed" from="ControlFactory3/House3" to="." method="_on_House3_pressed"]
+[connection signal="pressed" from="ControlFactory3/House3" to="." method="_on_TextureButton_pressed"]
