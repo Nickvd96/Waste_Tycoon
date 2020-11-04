@@ -88,7 +88,6 @@ __meta__ = {
 }
 
 [node name="PopupMenu" type="PopupMenu" parent="ControlFactory1"]
-visible = true
 margin_right = 20.0
 margin_bottom = 20.0
 
@@ -159,6 +158,7 @@ __meta__ = {
 }
 
 [node name="PlasticTimer" type="Timer" parent="."]
+wait_time = 5.0
 autostart = true
 
 [node name="GFTTimer" type="Timer" parent="."]
@@ -171,8 +171,8 @@ autostart = true
 autostart = true
 [connection signal="pressed" from="ControlFactory1/House1" to="." method="_on_House1_pressed"]
 [connection signal="pressed" from="ControlFactory2/House2" to="." method="_on_House2_pressed"]
-[connection signal="pressed" from="ControlFactory3/House3" to="." method="_on_House3_pressed"]
 [connection signal="pressed" from="ControlFactory3/House3" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="ControlFactory3/House3" to="." method="_on_House3_pressed"]
 [connection signal="timeout" from="PlasticTimer" to="." method="_on_PlasticTimer_timeout"]
 [connection signal="timeout" from="GFTTimer" to="." method="_on_GFTTimer_timeout"]
 [connection signal="timeout" from="PaperTimer" to="." method="_on_PaperTimer_timeout"]
