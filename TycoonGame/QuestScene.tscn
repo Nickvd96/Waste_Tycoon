@@ -4,6 +4,9 @@
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Citybackground" type="Sprite" parent="."]
-position = Vector2( 546.389, 204.565 )
+[node name="QuestUI" type="CanvasLayer" parent="."]
+
+[node name="Citybackground" type="Sprite" parent="QuestUI"]
+position = Vector2( 511.308, 299.701 )
+scale = Vector2( 1.06318, 1.1013 )
 texture = ExtResource( 1 )
