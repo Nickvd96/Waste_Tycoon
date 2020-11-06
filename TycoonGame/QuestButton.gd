@@ -18,3 +18,4 @@ func _ready():
 
 func _on_QuestButton_pressed():
 	print ("test")
+	get_tree().change_scene("res://QuestScene.tscn")
