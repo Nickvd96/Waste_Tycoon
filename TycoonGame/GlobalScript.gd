@@ -4,7 +4,7 @@ var Plastic = 0
 var GFT = 0
 var Paper = 0
 
-var PlasticPerSecond = 100
+var PlasticPerSecond = 1
 var GFTPerSecond = 1
 var PaperPerSecond = 1
 
