@@ -167,9 +167,9 @@ __meta__ = {
 
 [node name="Paperlabel" type="Label" parent="ControlFactory3"]
 margin_left = -168.29
-margin_top = -58.7069
+margin_top = -60.9518
 margin_right = -33.29
-margin_bottom = -31.7069
+margin_bottom = -33.9518
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Aantal papier"

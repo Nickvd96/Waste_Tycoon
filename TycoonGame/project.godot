@@ -17,17 +17,12 @@ _global_script_class_icons={
 
 config/name="Tycoon Game"
 run/main_scene="res://MainGame.tscn"
-config/icon="res://icon.png"
+config/icon="res://LogoGame.png"
 
 [autoload]
 
 SaveScript="*res://SaveScript.gd"
 GlobalScript="*res://GlobalScript.gd"
-
-[display]
-
-window/stretch/mode="viewport"
-window/stretch/aspect="keep"
 
 [rendering]
 
