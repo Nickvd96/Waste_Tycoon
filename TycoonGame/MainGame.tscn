@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Img/Citybackground.jpg" type="Texture" id=1]
 [ext_resource path="res://Img/House1.png" type="Texture" id=2]
@@ -11,8 +11,21 @@
 [ext_resource path="res://Img/GFTFactorySign.png" type="Texture" id=9]
 [ext_resource path="res://Img/PaperFactorySign.png" type="Texture" id=10]
 [ext_resource path="res://Img/PopMenuFactory1.png" type="Texture" id=11]
-[ext_resource path="res://Img/House2.png" type="Texture" id=12]
+[ext_resource path="res://Img/QuestStart.png" type="Texture" id=12]
 [ext_resource path="res://QuestButton.gd" type="Script" id=13]
+[ext_resource path="res://Gasalt-Regular.ttf" type="DynamicFontData" id=14]
+
+[sub_resource type="DynamicFont" id=1]
+size = 26
+font_data = ExtResource( 14 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 26
+font_data = ExtResource( 14 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 26
+font_data = ExtResource( 14 )
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 5 )
@@ -59,11 +72,13 @@ scale = Vector2( 0.0373424, 0.0373424 )
 texture = ExtResource( 10 )
 
 [node name="QuestButton" type="TextureButton" parent="UI"]
-margin_left = 776.0
-margin_top = 46.2929
-margin_right = 950.0
-margin_bottom = 281.293
+margin_left = 752.766
+margin_top = 16.0
+margin_right = 977.766
+margin_bottom = 85.0
 texture_normal = ExtResource( 12 )
+expand = true
+stretch_mode = 5
 script = ExtResource( 13 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -90,12 +105,13 @@ __meta__ = {
 }
 
 [node name="Plasticlabel" type="Label" parent="ControlFactory1"]
-margin_left = -24.7872
-margin_top = -66.122
-margin_right = 110.213
-margin_bottom = -52.122
+margin_left = -31.2806
+margin_top = -71.0
+margin_right = 148.719
+margin_bottom = -44.0
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Aantal plastic"
+text = "Plastic Resroucres"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -129,12 +145,13 @@ __meta__ = {
 }
 
 [node name="GFTLabel" type="Label" parent="ControlFactory2"]
-margin_left = -107.499
-margin_top = -65.9556
-margin_right = 27.5013
-margin_bottom = -51.9556
+margin_left = -105.118
+margin_top = -71.5115
+margin_right = 39.8821
+margin_bottom = -44.5115
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Aantal GFT resources"
+text = "GFT resources"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -149,10 +166,11 @@ __meta__ = {
 }
 
 [node name="Paperlabel" type="Label" parent="ControlFactory3"]
-margin_left = -143.685
-margin_top = -56.3258
-margin_right = -8.68536
-margin_bottom = -42.3258
+margin_left = -168.29
+margin_top = -60.9518
+margin_right = -33.29
+margin_bottom = -33.9518
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Aantal papier"
 __meta__ = {
