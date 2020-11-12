@@ -72,13 +72,12 @@ scale = Vector2( 0.0373424, 0.0373424 )
 texture = ExtResource( 10 )
 
 [node name="QuestButton" type="TextureButton" parent="UI"]
-margin_left = 752.766
+margin_left = 788.0
 margin_top = 16.0
-margin_right = 977.766
-margin_bottom = 85.0
+margin_right = 994.0
+margin_bottom = 75.0
 texture_normal = ExtResource( 12 )
 expand = true
-stretch_mode = 5
 script = ExtResource( 13 )
 __meta__ = {
 "_edit_use_anchors_": false
