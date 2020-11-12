@@ -24,6 +24,10 @@ config/icon="res://Img/LogoGameV1.png"
 SaveScript="*res://SaveScript.gd"
 GlobalScript="*res://GlobalScript.gd"
 
+[display]
+
+window/size/fullscreen=true
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
