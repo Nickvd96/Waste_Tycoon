@@ -11,7 +11,7 @@
 [ext_resource path="res://Img/GFTFactorySign.png" type="Texture" id=9]
 [ext_resource path="res://Img/PaperFactorySign.png" type="Texture" id=10]
 [ext_resource path="res://Img/PopMenuFactory1.png" type="Texture" id=11]
-[ext_resource path="res://Img/House2.png" type="Texture" id=12]
+[ext_resource path="res://Img/QuestStart.png" type="Texture" id=12]
 [ext_resource path="res://QuestButton.gd" type="Script" id=13]
 [ext_resource path="res://Gasalt-Regular.ttf" type="DynamicFontData" id=14]
 
@@ -72,11 +72,13 @@ scale = Vector2( 0.0373424, 0.0373424 )
 texture = ExtResource( 10 )
 
 [node name="QuestButton" type="TextureButton" parent="UI"]
-margin_left = 776.0
-margin_top = 46.2929
-margin_right = 950.0
-margin_bottom = 281.293
+margin_left = 752.766
+margin_top = 16.0
+margin_right = 977.766
+margin_bottom = 85.0
 texture_normal = ExtResource( 12 )
+expand = true
+stretch_mode = 5
 script = ExtResource( 13 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -103,9 +105,9 @@ __meta__ = {
 }
 
 [node name="Plasticlabel" type="Label" parent="ControlFactory1"]
-margin_left = -31.0
+margin_left = -31.2806
 margin_top = -71.0
-margin_right = 149.0
+margin_right = 148.719
 margin_bottom = -44.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
