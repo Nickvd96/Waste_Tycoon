@@ -3,10 +3,10 @@
 [ext_resource path="res://Img/Citybackground.jpg" type="Texture" id=1]
 [ext_resource path="res://Img/House1.png" type="Texture" id=2]
 [ext_resource path="res://Img/House1clicked.png" type="Texture" id=3]
-[ext_resource path="res://Img/WaterbottleResource.png" type="Texture" id=4]
+[ext_resource path="res://Img/PlasticBar.png" type="Texture" id=4]
 [ext_resource path="res://ResourceScript.gd" type="Script" id=5]
 [ext_resource path="res://Img/PaperResource.png" type="Texture" id=6]
-[ext_resource path="res://Img/GFTResources.png" type="Texture" id=7]
+[ext_resource path="res://Img/GFTBar.png" type="Texture" id=7]
 [ext_resource path="res://Img/PlasticFactorySign.png" type="Texture" id=8]
 [ext_resource path="res://Img/GFTFactorySign.png" type="Texture" id=9]
 [ext_resource path="res://Img/PaperFactorySign.png" type="Texture" id=10]
@@ -16,62 +16,95 @@
 [ext_resource path="res://Gasalt-Regular.ttf" type="DynamicFontData" id=14]
 
 [sub_resource type="DynamicFont" id=1]
-size = 26
+size = 56
 font_data = ExtResource( 14 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 26
+size = 56
 font_data = ExtResource( 14 )
 
 [sub_resource type="DynamicFont" id=3]
-size = 26
+size = 56
 font_data = ExtResource( 14 )
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 5 )
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="UI" type="CanvasLayer" parent="."]
 layer = -5
+follow_viewport_scale = 2.0
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="Background" type="Sprite" parent="UI"]
-scale = Vector2( 1.0668, 1.11225 )
+position = Vector2( 0, -77.5794 )
+scale = Vector2( 3.16336, 3.29814 )
 texture = ExtResource( 1 )
 centered = false
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="ResourcesBarPlastic" type="Sprite" parent="UI"]
-position = Vector2( 173.807, 82.2273 )
-scale = Vector2( 0.099322, 0.099322 )
+position = Vector2( 553.917, 227.944 )
+scale = Vector2( 0.210924, 0.210924 )
 texture = ExtResource( 4 )
 offset = Vector2( -484.499, -313.037 )
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="ResourcesBarGFT" type="Sprite" parent="UI"]
-position = Vector2( 385.682, 80.5417 )
-scale = Vector2( 0.099322, 0.099322 )
+position = Vector2( 1299.45, 221.493 )
+scale = Vector2( 0.20506, 0.20506 )
 texture = ExtResource( 7 )
 offset = Vector2( -484.499, -313.037 )
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="ResourcesBarPaper" type="Sprite" parent="UI"]
-position = Vector2( 602.682, 77.5417 )
-scale = Vector2( 0.099322, 0.099322 )
+position = Vector2( 2020.32, 239.332 )
+scale = Vector2( 0.281483, 0.281483 )
 texture = ExtResource( 6 )
 offset = Vector2( -484.499, -313.037 )
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="SignFactory1" type="Sprite" parent="UI"]
-position = Vector2( 76.4837, 483.023 )
-scale = Vector2( 0.0373424, 0.0373424 )
+position = Vector2( 440.562, 1309.97 )
+scale = Vector2( 0.0907107, 0.0907107 )
 texture = ExtResource( 8 )
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="SignFactory2" type="Sprite" parent="UI"]
-position = Vector2( 329.785, 431.887 )
-scale = Vector2( 0.0373424, 0.0373424 )
+position = Vector2( 1261.16, 1255.83 )
+scale = Vector2( 0.0837082, 0.0837082 )
 texture = ExtResource( 9 )
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="SignFactory3" type="Sprite" parent="UI"]
-position = Vector2( 634.222, 459.239 )
-scale = Vector2( 0.0373424, 0.0373424 )
+position = Vector2( 2134.15, 1263.76 )
+scale = Vector2( 0.0770845, 0.0770845 )
 texture = ExtResource( 10 )
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="QuestButton" type="TextureButton" parent="UI"]
+anchor_left = 0.531908
+anchor_top = 0.0381944
+anchor_right = 0.650329
+anchor_bottom = 0.109722
 margin_left = 788.0
 margin_top = 16.0
 margin_right = 994.0
@@ -80,7 +113,7 @@ texture_normal = ExtResource( 12 )
 expand = true
 script = ExtResource( 13 )
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="ControlFactory1" type="Control" parent="."]
@@ -89,21 +122,30 @@ margin_top = 109.0
 margin_right = 278.0
 margin_bottom = 511.0
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="House1" type="TextureButton" parent="ControlFactory1"]
+anchor_left = 3.09509
+anchor_top = 1.67359
+anchor_right = 4.65905
+anchor_bottom = 2.17359
 margin_left = 0.276886
 margin_top = 272.299
 margin_right = 174.277
 margin_bottom = 402.299
 texture_normal = ExtResource( 2 )
 texture_pressed = ExtResource( 3 )
+expand = true
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="Plasticlabel" type="Label" parent="ControlFactory1"]
+anchor_left = 1.63884
+anchor_top = 0.23845
+anchor_right = 2.83652
+anchor_bottom = 0.313077
 margin_left = -31.2806
 margin_top = -71.0
 margin_right = 148.719
@@ -112,7 +154,7 @@ custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Plastic Resroucres"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="PopupMenu" type="PopupMenu" parent="ControlFactory1"]
@@ -123,6 +165,9 @@ margin_bottom = 20.0
 position = Vector2( 85.7499, 301.553 )
 scale = Vector2( 0.0628421, 0.0628421 )
 texture = ExtResource( 11 )
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="ControlFactory2" type="Control" parent="."]
 margin_left = 387.0
@@ -130,20 +175,29 @@ margin_top = 107.0
 margin_right = 558.0
 margin_bottom = 503.0
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="House2" type="TextureButton" parent="ControlFactory2"]
+anchor_left = 6.27116
+anchor_top = 1.65823
+anchor_right = 8.01969
+anchor_bottom = 2.22136
 margin_top = 271.22
 margin_right = 174.0
 margin_bottom = 401.22
 texture_normal = ExtResource( 2 )
 texture_pressed = ExtResource( 3 )
+expand = true
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="GFTLabel" type="Label" parent="ControlFactory2"]
+anchor_left = 4.98202
+anchor_top = 0.23596
+anchor_right = 6.11067
+anchor_bottom = 0.326869
 margin_left = -105.118
 margin_top = -71.5115
 margin_right = 39.8821
@@ -152,7 +206,7 @@ custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "GFT resources"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="ControlFactory3" type="Control" parent="."]
@@ -161,10 +215,14 @@ margin_top = 93.0
 margin_right = 849.0
 margin_bottom = 506.0
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="Paperlabel" type="Label" parent="ControlFactory3"]
+anchor_left = 7.19994
+anchor_top = 0.212078
+anchor_right = 8.0628
+anchor_bottom = 0.284717
 margin_left = -168.29
 margin_top = -60.9518
 margin_right = -33.29
@@ -173,18 +231,23 @@ custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Aantal papier"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="House3" type="TextureButton" parent="ControlFactory3"]
+anchor_left = 8.99784
+anchor_top = 1.6027
+anchor_right = 10.7521
+anchor_bottom = 2.1596
 margin_left = 2.3783
 margin_top = 282.085
 margin_right = 176.378
 margin_bottom = 412.085
 texture_normal = ExtResource( 2 )
 texture_pressed = ExtResource( 3 )
+expand = true
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="PlasticTimer" type="Timer" parent="."]

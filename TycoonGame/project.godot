@@ -26,8 +26,11 @@ GlobalScript="*res://GlobalScript.gd"
 
 [display]
 
+window/size/width=3040
+window/size/height=1440
 window/size/fullscreen=true
 window/stretch/mode="viewport"
+window/stretch/aspect="keep"
 
 [rendering]
 
