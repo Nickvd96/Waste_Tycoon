@@ -21,4 +21,4 @@ func _on_ExitButton_pressed():
 
 
 func _on_QuestStart_pressed():
-	print ("Start Quest")
+	get_tree().change_scene("res://SearchQuest.tscn")
