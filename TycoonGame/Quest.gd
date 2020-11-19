@@ -12,12 +12,9 @@ var party : Party
 func initialize(game, _party : Party ) -> void:
 	game.connect("combat_started", self, "_on_Game_combat_started")
 	party = _party
+	
+	func find_available(reference : Quest) -> Quest:
+		return available_quests.find(reference)
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func get_available_quests() -> Array:
+	return available_quests.get_quests()
