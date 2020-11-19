@@ -1,10 +1,16 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Img/can.png" type="Texture" id=1]
 [ext_resource path="res://Img/j8socf0o.bmp" type="Texture" id=2]
 [ext_resource path="res://Img/50s5yncm.bmp" type="Texture" id=3]
 [ext_resource path="res://Img/crumpled-paper-png-3.png" type="Texture" id=4]
 [ext_resource path="res://Img/8kusemry.bmp" type="Texture" id=5]
+[ext_resource path="res://Gasalt-Regular.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://QuestPlayScript.gd" type="Script" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 250
+font_data = ExtResource( 6 )
 
 [node name="Game" type="Node2D"]
 __meta__ = {
@@ -57,6 +63,7 @@ margin_bottom = 992.676
 rect_rotation = 102.444
 texture_normal = ExtResource( 1 )
 expand = true
+script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -94,7 +101,19 @@ expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Label" type="Label" parent="."]
+margin_left = 33.0
+margin_top = -243.0
+margin_right = 554.0
+margin_bottom = 8.0
+custom_fonts/font = SubResource( 1 )
+text = "Score"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="timeout" from="PlasticTimer" to="." method="_on_PlasticTimer_timeout"]
 [connection signal="timeout" from="GFTTimer" to="." method="_on_GFTTimer_timeout"]
 [connection signal="timeout" from="PaperTimer" to="." method="_on_PaperTimer_timeout"]
 [connection signal="timeout" from="SaveResourcesPerSec" to="." method="_on_SaveResourcesPerSec_timeout"]
+[connection signal="pressed" from="CanObject" to="CanObject" method="_on_CanObject_pressed"]
