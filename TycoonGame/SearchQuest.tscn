@@ -117,3 +117,6 @@ __meta__ = {
 [connection signal="timeout" from="PaperTimer" to="." method="_on_PaperTimer_timeout"]
 [connection signal="timeout" from="SaveResourcesPerSec" to="." method="_on_SaveResourcesPerSec_timeout"]
 [connection signal="pressed" from="CanObject" to="CanObject" method="_on_CanObject_pressed"]
+[connection signal="pressed" from="BottleObject" to="CanObject" method="_on_BottleObject_pressed"]
+[connection signal="pressed" from="PaperObject" to="CanObject" method="_on_PaperObject_pressed"]
+[connection signal="pressed" from="MinecraftVlees" to="CanObject" method="_on_MinecraftVlees_pressed"]
