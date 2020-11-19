@@ -1,0 +1,100 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Img/can.png" type="Texture" id=1]
+[ext_resource path="res://Img/j8socf0o.bmp" type="Texture" id=2]
+[ext_resource path="res://Img/50s5yncm.bmp" type="Texture" id=3]
+[ext_resource path="res://Img/crumpled-paper-png-3.png" type="Texture" id=4]
+[ext_resource path="res://Img/8kusemry.bmp" type="Texture" id=5]
+
+[node name="Game" type="Node2D"]
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="ControlFactory2" type="Control" parent="."]
+margin_left = 387.0
+margin_top = 107.0
+margin_right = 558.0
+margin_bottom = 503.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ControlFactory3" type="Control" parent="."]
+margin_left = 674.0
+margin_top = 93.0
+margin_right = 849.0
+margin_bottom = 506.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="PlasticTimer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[node name="GFTTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="PaperTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="SaveResourcesPerSec" type="Timer" parent="."]
+autostart = true
+
+[node name="QuestFlow" type="Node" parent="."]
+
+[node name="background" type="Sprite" parent="."]
+position = Vector2( 1522.6, 594.124 )
+scale = Vector2( 1.97831, 1.97831 )
+texture = ExtResource( 2 )
+
+[node name="CanObject" type="TextureButton" parent="."]
+margin_left = 1149.44
+margin_top = 895.676
+margin_right = 1246.44
+margin_bottom = 992.676
+rect_rotation = 102.444
+texture_normal = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BottleObject" type="TextureButton" parent="."]
+margin_left = 1161.01
+margin_top = 1380.69
+margin_right = 1180.01
+margin_bottom = 1407.69
+rect_rotation = 78.8806
+texture_normal = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PaperObject" type="TextureButton" parent="."]
+margin_left = 2608.0
+margin_top = 894.0
+margin_right = 2644.0
+margin_bottom = 932.0
+texture_normal = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MinecraftVlees" type="TextureButton" parent="."]
+margin_left = 2052.0
+margin_top = 862.0
+margin_right = 2082.0
+margin_bottom = 892.0
+texture_normal = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="timeout" from="PlasticTimer" to="." method="_on_PlasticTimer_timeout"]
+[connection signal="timeout" from="GFTTimer" to="." method="_on_GFTTimer_timeout"]
+[connection signal="timeout" from="PaperTimer" to="." method="_on_PaperTimer_timeout"]
+[connection signal="timeout" from="SaveResourcesPerSec" to="." method="_on_SaveResourcesPerSec_timeout"]
