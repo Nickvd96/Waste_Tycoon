@@ -8,7 +8,8 @@ var questScore = 4
 
 
 func _on_CanObject_pressed():
-	#questScore = questScore -1
+	questScore = questScore -1
+	print(questScore)
 	#CanObject.queue_free()
 	print("Blikje")
 	return
