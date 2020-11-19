@@ -61,7 +61,7 @@ margin_top = 796.028
 margin_right = 2477.87
 margin_bottom = 1122.03
 custom_fonts/font = SubResource( 1 )
-text = "Onze stad is een rommel na het laatste concert! Kan je ons helpen?"
+text = "Our city is a mess! The concert ruined everything! Can you help out?"
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
