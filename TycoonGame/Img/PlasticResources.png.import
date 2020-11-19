@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/WaterbottleResource.png-c1a227edc38a5f0d2c544a2330621f5b.stex"
+path="res://.import/PlasticResources.png-f3206c80dc362286d7b88781eb70109d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Img/WaterbottleResource.png"
-dest_files=[ "res://.import/WaterbottleResource.png-c1a227edc38a5f0d2c544a2330621f5b.stex" ]
+source_file="res://Img/PlasticResources.png"
+dest_files=[ "res://.import/PlasticResources.png-f3206c80dc362286d7b88781eb70109d.stex" ]
 
 [params]
 

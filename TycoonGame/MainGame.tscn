@@ -3,10 +3,10 @@
 [ext_resource path="res://Img/Citybackground.jpg" type="Texture" id=1]
 [ext_resource path="res://Img/House1.png" type="Texture" id=2]
 [ext_resource path="res://Img/House1clicked.png" type="Texture" id=3]
-[ext_resource path="res://Img/PlasticBar.png" type="Texture" id=4]
+[ext_resource path="res://Img/PlasticResources.png" type="Texture" id=4]
 [ext_resource path="res://ResourceScript.gd" type="Script" id=5]
-[ext_resource path="res://Img/PaperResource.png" type="Texture" id=6]
-[ext_resource path="res://Img/GFTBar.png" type="Texture" id=7]
+[ext_resource path="res://Img/GFTResources.png" type="Texture" id=6]
+[ext_resource path="res://Img/PaperResources.png" type="Texture" id=7]
 [ext_resource path="res://Img/PlasticFactorySign.png" type="Texture" id=8]
 [ext_resource path="res://Img/GFTFactorySign.png" type="Texture" id=9]
 [ext_resource path="res://Img/PaperFactorySign.png" type="Texture" id=10]
@@ -41,7 +41,7 @@ __meta__ = {
 }
 
 [node name="Background" type="Sprite" parent="UI"]
-position = Vector2( 0, -77.5794 )
+position = Vector2( 0, -72 )
 scale = Vector2( 3.16336, 3.29814 )
 texture = ExtResource( 1 )
 centered = false
@@ -50,8 +50,8 @@ __meta__ = {
 }
 
 [node name="ResourcesBarPlastic" type="Sprite" parent="UI"]
-position = Vector2( 553.917, 227.944 )
-scale = Vector2( 0.210924, 0.210924 )
+position = Vector2( 792, 370 )
+scale = Vector2( 0.80584, 0.80584 )
 texture = ExtResource( 4 )
 offset = Vector2( -484.499, -313.037 )
 __meta__ = {
@@ -59,18 +59,18 @@ __meta__ = {
 }
 
 [node name="ResourcesBarGFT" type="Sprite" parent="UI"]
-position = Vector2( 1299.45, 221.493 )
-scale = Vector2( 0.20506, 0.20506 )
-texture = ExtResource( 7 )
+position = Vector2( 1496, 354 )
+scale = Vector2( 0.766925, 0.766925 )
+texture = ExtResource( 6 )
 offset = Vector2( -484.499, -313.037 )
 __meta__ = {
 "_editor_description_": ""
 }
 
 [node name="ResourcesBarPaper" type="Sprite" parent="UI"]
-position = Vector2( 2020.32, 239.332 )
-scale = Vector2( 0.281483, 0.281483 )
-texture = ExtResource( 6 )
+position = Vector2( 2232, 362 )
+scale = Vector2( 0.788263, 0.788264 )
+texture = ExtResource( 7 )
 offset = Vector2( -484.499, -313.037 )
 __meta__ = {
 "_editor_description_": ""
@@ -142,10 +142,10 @@ __meta__ = {
 }
 
 [node name="Plasticlabel" type="Label" parent="ControlFactory1"]
-anchor_left = 1.63884
-anchor_top = 0.23845
-anchor_right = 2.83652
-anchor_bottom = 0.313077
+anchor_left = 1.26326
+anchor_top = 0.121891
+anchor_right = 2.46094
+anchor_bottom = 0.196518
 margin_left = -31.2806
 margin_top = -71.0
 margin_right = 148.719
@@ -194,10 +194,10 @@ __meta__ = {
 }
 
 [node name="GFTLabel" type="Label" parent="ControlFactory2"]
-anchor_left = 4.98202
-anchor_top = 0.23596
-anchor_right = 6.11067
-anchor_bottom = 0.326869
+anchor_left = 4.32818
+anchor_top = 0.132605
+anchor_right = 5.45682
+anchor_bottom = 0.223514
 margin_left = -105.118
 margin_top = -71.5115
 margin_right = 39.8821
@@ -219,10 +219,10 @@ __meta__ = {
 }
 
 [node name="Paperlabel" type="Label" parent="ControlFactory3"]
-anchor_left = 7.19994
-anchor_top = 0.212078
-anchor_right = 8.0628
-anchor_bottom = 0.284717
+anchor_left = 7.12737
+anchor_top = 0.125791
+anchor_right = 7.99023
+anchor_bottom = 0.198431
 margin_left = -168.29
 margin_top = -60.9518
 margin_right = -33.29
