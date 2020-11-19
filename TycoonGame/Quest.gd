@@ -18,3 +18,8 @@ func initialize(game, _party : Party ) -> void:
 
 func get_available_quests() -> Array:
 	return available_quests.get_quests()
+
+func is_available(reference : Quest) -> bool:
+	return available_quests.find(reference) != null
+	
+	
