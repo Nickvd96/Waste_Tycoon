@@ -266,6 +266,7 @@ autostart = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 15 )
+volume_db = -5.048
 autoplay = true
 [connection signal="pressed" from="UI/QuestButton" to="UI/QuestButton" method="_on_QuestButton_pressed"]
 [connection signal="pressed" from="ControlFactory1/House1" to="." method="_on_House1_pressed"]
