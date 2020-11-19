@@ -2,9 +2,8 @@ extends Node
 
 var questScore = 4
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+func _start():
+	$Label.text = str(questScore)
 
 
 func _on_CanObject_pressed():
