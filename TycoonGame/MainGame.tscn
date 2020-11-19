@@ -11,7 +11,7 @@
 [ext_resource path="res://Img/GFTFactorySign.png" type="Texture" id=9]
 [ext_resource path="res://Img/PaperFactorySign.png" type="Texture" id=10]
 [ext_resource path="res://Img/PopMenuFactory1.png" type="Texture" id=11]
-[ext_resource path="res://Img/QuestStart.png" type="Texture" id=12]
+[ext_resource path="res://Img/QuestIcon.png" type="Texture" id=12]
 [ext_resource path="res://QuestButton.gd" type="Script" id=13]
 [ext_resource path="res://Gasalt-Regular.ttf" type="DynamicFontData" id=14]
 
@@ -101,14 +101,14 @@ __meta__ = {
 }
 
 [node name="QuestButton" type="TextureButton" parent="UI"]
-anchor_left = 0.531908
-anchor_top = 0.0381944
-anchor_right = 0.650329
-anchor_bottom = 0.109722
-margin_left = 788.0
-margin_top = 16.0
-margin_right = 994.0
-margin_bottom = 75.0
+anchor_left = 0.616325
+anchor_top = 0.0959885
+anchor_right = 0.682145
+anchor_bottom = 0.389451
+margin_left = 876.0
+margin_top = -142.0
+margin_right = 835.906
+margin_bottom = -269.586
 texture_normal = ExtResource( 12 )
 expand = true
 script = ExtResource( 13 )

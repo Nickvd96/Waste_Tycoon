@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Gasalt-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Img/j8socf0o.bmp" type="Texture" id=2]
 [ext_resource path="res://QuestChoice.gd" type="Script" id=3]
 [ext_resource path="res://QuestStart.gd" type="Script" id=4]
+[ext_resource path="res://Img/DummyButtonQuest.png" type="Texture" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 140
@@ -51,7 +52,7 @@ autostart = true
 [node name="QuestFlow" type="Node" parent="."]
 
 [node name="background" type="Sprite" parent="."]
-position = Vector2( 1518.82, 594.124 )
+position = Vector2( 1522.6, 594.124 )
 scale = Vector2( 1.97831, 1.97831 )
 texture = ExtResource( 2 )
 
@@ -67,11 +68,25 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Deny" type="Label" parent="."]
-margin_left = 1666.38
-margin_top = 1183.01
-margin_right = 2789.38
-margin_bottom = 1392.01
+[node name="ExitButton" type="TextureButton" parent="."]
+material = SubResource( 2 )
+use_parent_material = true
+margin_left = 1581.0
+margin_top = 1124.0
+margin_right = 2687.0
+margin_bottom = 1378.0
+texture_normal = ExtResource( 5 )
+expand = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Deny" type="Label" parent="ExitButton"]
+margin_left = 35.7756
+margin_top = 47.7961
+margin_right = 1094.78
+margin_bottom = 188.796
 custom_fonts/font = SubResource( 1 )
 text = "I'm currently busy..."
 autowrap = true
@@ -79,38 +94,28 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Accept" type="Label" parent="."]
-margin_left = 488.0
-margin_top = 1177.0
-margin_right = 1271.0
-margin_bottom = 1386.0
-custom_fonts/font = SubResource( 1 )
-text = "Sure, I'll help!"
-autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ExitButton" type="TextureButton" parent="."]
-material = SubResource( 2 )
-use_parent_material = true
-margin_left = 1633.8
-margin_top = 1105.02
-margin_right = 2679.8
-margin_bottom = 1409.02
-script = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="QuestStart" type="TextureButton" parent="."]
 material = SubResource( 2 )
 use_parent_material = true
-margin_left = 381.474
-margin_top = 1089.14
-margin_right = 1427.47
-margin_bottom = 1393.14
+margin_left = 381.0
+margin_top = 1119.0
+margin_right = 1423.0
+margin_bottom = 1377.0
+texture_normal = ExtResource( 5 )
+expand = true
 script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Accept" type="Label" parent="QuestStart"]
+margin_left = 118.0
+margin_top = 50.0
+margin_right = 871.0
+margin_bottom = 191.0
+custom_fonts/font = SubResource( 1 )
+text = "Sure, I'll help!"
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -119,5 +124,5 @@ __meta__ = {
 [connection signal="timeout" from="PaperTimer" to="." method="_on_PaperTimer_timeout"]
 [connection signal="timeout" from="SaveResourcesPerSec" to="." method="_on_SaveResourcesPerSec_timeout"]
 [connection signal="pressed" from="ExitButton" to="ExitButton" method="_on_ExitButton_pressed"]
-[connection signal="pressed" from="QuestStart" to="QuestStart" method="_on_ExitButton_pressed"]
 [connection signal="pressed" from="QuestStart" to="ExitButton" method="_on_QuestStart_pressed"]
+[connection signal="pressed" from="QuestStart" to="QuestStart" method="_on_ExitButton_pressed"]
