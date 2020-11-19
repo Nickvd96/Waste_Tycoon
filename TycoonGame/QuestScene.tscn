@@ -1,12 +1,16 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Gasalt-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Img/j8socf0o.bmp" type="Texture" id=2]
+[ext_resource path="res://QuestChoice.gd" type="Script" id=3]
+[ext_resource path="res://QuestStart.gd" type="Script" id=4]
 
 [sub_resource type="DynamicFont" id=1]
-size = 160
+size = 140
 outline_size = 2
 font_data = ExtResource( 1 )
+
+[sub_resource type="CanvasItemMaterial" id=2]
 
 [node name="Game" type="Node2D"]
 __meta__ = {
@@ -46,19 +50,67 @@ autostart = true
 
 [node name="QuestFlow" type="Node" parent="."]
 
-[node name="j8socf0o" type="Sprite" parent="."]
+[node name="background" type="Sprite" parent="."]
 position = Vector2( 1518.82, 594.124 )
 scale = Vector2( 1.97831, 1.97831 )
 texture = ExtResource( 2 )
 
-[node name="Label" type="Label" parent="."]
-margin_left = 529.54
-margin_top = 849.915
-margin_right = 2661.54
-margin_bottom = 1175.91
+[node name="QuestExplain" type="Label" parent="."]
+margin_left = 545.874
+margin_top = 796.028
+margin_right = 2477.87
+margin_bottom = 1122.03
 custom_fonts/font = SubResource( 1 )
 text = "Onze stad is een rommel na het laatste concert! Kan je ons helpen?"
 autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Deny" type="Label" parent="."]
+margin_left = 1666.38
+margin_top = 1183.01
+margin_right = 2789.38
+margin_bottom = 1392.01
+custom_fonts/font = SubResource( 1 )
+text = "I'm currently busy..."
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Accept" type="Label" parent="."]
+margin_left = 488.0
+margin_top = 1177.0
+margin_right = 1271.0
+margin_bottom = 1386.0
+custom_fonts/font = SubResource( 1 )
+text = "Sure, I'll help!"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExitButton" type="TextureButton" parent="."]
+material = SubResource( 2 )
+use_parent_material = true
+margin_left = 1633.8
+margin_top = 1105.02
+margin_right = 2679.8
+margin_bottom = 1409.02
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuestStart" type="TextureButton" parent="."]
+material = SubResource( 2 )
+use_parent_material = true
+margin_left = 381.474
+margin_top = 1089.14
+margin_right = 1427.47
+margin_bottom = 1393.14
+script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -66,3 +118,6 @@ __meta__ = {
 [connection signal="timeout" from="GFTTimer" to="." method="_on_GFTTimer_timeout"]
 [connection signal="timeout" from="PaperTimer" to="." method="_on_PaperTimer_timeout"]
 [connection signal="timeout" from="SaveResourcesPerSec" to="." method="_on_SaveResourcesPerSec_timeout"]
+[connection signal="pressed" from="ExitButton" to="ExitButton" method="_on_ExitButton_pressed"]
+[connection signal="pressed" from="QuestStart" to="QuestStart" method="_on_ExitButton_pressed"]
+[connection signal="pressed" from="QuestStart" to="ExitButton" method="_on_QuestStart_pressed"]
