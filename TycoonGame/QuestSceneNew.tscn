@@ -244,6 +244,8 @@ autostart = true
 
 [node name="SaveResourcesPerSec" type="Timer" parent="."]
 autostart = true
+
+[node name="QuestFlow" type="Node" parent="."]
 [connection signal="pressed" from="ControlFactory1/House1" to="." method="_on_House1_pressed"]
 [connection signal="pressed" from="ControlFactory2/House2" to="." method="_on_House2_pressed"]
 [connection signal="pressed" from="ControlFactory3/House3" to="." method="_on_House3_pressed"]
