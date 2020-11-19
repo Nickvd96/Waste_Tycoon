@@ -11,24 +11,6 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="ControlFactory2" type="Control" parent="."]
-margin_left = 387.0
-margin_top = 107.0
-margin_right = 558.0
-margin_bottom = 503.0
-__meta__ = {
-"_edit_use_anchors_": true
-}
-
-[node name="ControlFactory3" type="Control" parent="."]
-margin_left = 674.0
-margin_top = 93.0
-margin_right = 849.0
-margin_bottom = 506.0
-__meta__ = {
-"_edit_use_anchors_": true
-}
-
 [node name="PlasticTimer" type="Timer" parent="."]
 wait_time = 5.0
 autostart = true

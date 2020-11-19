@@ -19,6 +19,10 @@ config/name="Tycoon Game"
 run/main_scene="res://MainGame.tscn"
 config/icon="res://Img/LogoGameV1.png"
 
+[audio]
+
+enable_audio_input=true
+
 [autoload]
 
 SaveScript="*res://SaveScript.gd"
