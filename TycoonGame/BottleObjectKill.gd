@@ -7,8 +7,8 @@ extends Node
 
 
 func _on_BottleObject_pressed():
-	#questScore = questScore -1
-	#print(questScore)
+	GlobalScript.QuestScore1 = GlobalScript.QuestScore1 -1
+	print(GlobalScript.QuestScore1)
 	print("Glas")
 	self.queue_free()
 	return

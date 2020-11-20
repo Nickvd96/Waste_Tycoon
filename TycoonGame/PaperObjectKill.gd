@@ -8,7 +8,8 @@ extends Node
 
 func _on_PaperObject_pressed():
 	#questScore = questScore -1
-	#print(questScore)
+	GlobalScript.QuestScore1 = GlobalScript.QuestScore1 -1
+	print(GlobalScript.QuestScore1)
 	print("Papier")
 	self.queue_free()
 	return

@@ -8,6 +8,8 @@ var PlasticPerSecond = 1
 var GFTPerSecond = 1
 var PaperPerSecond = 1
 
+var QuestScore1 = 4
+
 
 func _ready():
 	#inladen van savefile 
