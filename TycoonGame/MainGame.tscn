@@ -14,7 +14,7 @@
 [ext_resource path="res://Img/QuestIcon.png" type="Texture" id=12]
 [ext_resource path="res://QuestButton.gd" type="Script" id=13]
 [ext_resource path="res://Gasalt-Regular.ttf" type="DynamicFontData" id=14]
-[ext_resource path="res://Unrest - ELPHNT.ogg" type="AudioStream" id=15]
+[ext_resource path="res://Game Background Music.wav" type="AudioStream" id=15]
 
 [sub_resource type="DynamicFont" id=1]
 size = 56
