@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Img/can.png" type="Texture" id=1]
 [ext_resource path="res://Img/j8socf0o.bmp" type="Texture" id=2]
@@ -6,7 +6,10 @@
 [ext_resource path="res://Img/crumpled-paper-png-3.png" type="Texture" id=4]
 [ext_resource path="res://Img/8kusemry.bmp" type="Texture" id=5]
 [ext_resource path="res://Gasalt-Regular.ttf" type="DynamicFontData" id=6]
-[ext_resource path="res://QuestPlayScript.gd" type="Script" id=7]
+[ext_resource path="res://BottleObjectKill.gd" type="Script" id=7]
+[ext_resource path="res://MinecraftVleesKill.gd" type="Script" id=8]
+[ext_resource path="res://CanObjectKill.gd" type="Script" id=9]
+[ext_resource path="res://PaperObjectKill.gd" type="Script" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 size = 250
@@ -45,7 +48,7 @@ margin_bottom = 992.676
 rect_rotation = 102.444
 texture_normal = ExtResource( 1 )
 expand = true
-script = ExtResource( 7 )
+script = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -58,6 +61,7 @@ margin_bottom = 1407.69
 rect_rotation = 78.8806
 texture_normal = ExtResource( 5 )
 expand = true
+script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -69,6 +73,7 @@ margin_right = 2644.0
 margin_bottom = 932.0
 texture_normal = ExtResource( 4 )
 expand = true
+script = ExtResource( 10 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -80,6 +85,7 @@ margin_right = 2082.0
 margin_bottom = 892.0
 texture_normal = ExtResource( 3 )
 expand = true
+script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -91,7 +97,6 @@ margin_right = 564.091
 margin_bottom = 18.0908
 custom_fonts/font = SubResource( 1 )
 text = "Score"
-script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -100,6 +105,6 @@ __meta__ = {
 [connection signal="timeout" from="PaperTimer" to="." method="_on_PaperTimer_timeout"]
 [connection signal="timeout" from="SaveResourcesPerSec" to="." method="_on_SaveResourcesPerSec_timeout"]
 [connection signal="pressed" from="CanObject" to="CanObject" method="_on_CanObject_pressed"]
-[connection signal="pressed" from="BottleObject" to="CanObject" method="_on_BottleObject_pressed"]
-[connection signal="pressed" from="PaperObject" to="CanObject" method="_on_PaperObject_pressed"]
-[connection signal="pressed" from="MinecraftVlees" to="CanObject" method="_on_MinecraftVlees_pressed"]
+[connection signal="pressed" from="BottleObject" to="BottleObject" method="_on_BottleObject_pressed"]
+[connection signal="pressed" from="PaperObject" to="PaperObject" method="_on_PaperObject_pressed"]
+[connection signal="pressed" from="MinecraftVlees" to="MinecraftVlees" method="_on_MinecraftVlees_pressed"]
