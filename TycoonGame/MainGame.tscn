@@ -13,7 +13,7 @@
 [ext_resource path="res://Img/PopMenuFactory1.png" type="Texture" id=11]
 [ext_resource path="res://Img/QuestIcon.png" type="Texture" id=12]
 [ext_resource path="res://QuestButton.gd" type="Script" id=13]
-[ext_resource path="res://Gasalt-Regular.ttf" type="DynamicFontData" id=14]
+[ext_resource path="res://Fonts/arial.ttf" type="DynamicFontData" id=14]
 [ext_resource path="res://Game Background Music.wav" type="AudioStream" id=15]
 
 [sub_resource type="DynamicFont" id=1]
@@ -153,7 +153,7 @@ margin_right = 148.719
 margin_bottom = -44.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Plastic Resroucres"
+text = "Plastic Resources"
 __meta__ = {
 "_edit_use_anchors_": true
 }
@@ -195,10 +195,10 @@ __meta__ = {
 }
 
 [node name="GFTLabel" type="Label" parent="ControlFactory2"]
-anchor_left = 4.32818
-anchor_top = 0.132605
-anchor_right = 5.45682
-anchor_bottom = 0.223514
+anchor_left = 4.31776
+anchor_top = 0.122436
+anchor_right = 5.65694
+anchor_bottom = 0.213346
 margin_left = -105.118
 margin_top = -71.5115
 margin_right = 39.8821
@@ -220,10 +220,10 @@ __meta__ = {
 }
 
 [node name="Paperlabel" type="Label" parent="ControlFactory3"]
-anchor_left = 7.12737
-anchor_top = 0.125791
-anchor_right = 7.99023
-anchor_bottom = 0.198431
+anchor_left = 7.10171
+anchor_top = 0.133944
+anchor_right = 8.21028
+anchor_bottom = 0.221111
 margin_left = -168.29
 margin_top = -60.9518
 margin_right = -33.29
