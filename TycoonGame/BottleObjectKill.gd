@@ -8,10 +8,12 @@ extends Node
 
 func _on_BottleObject_pressed():
 	GlobalScript.QuestScore1 = GlobalScript.QuestScore1 -1
-	print(GlobalScript.QuestScore1)
-	print("Glas")
+	#print(GlobalScript.QuestScore1)
+	#print("Glas")
 	if GlobalScript.QuestScore1 == 0 :
-		print ("You have completed the quest!")
+		#print ("You have completed the quest!")
+		get_tree().change_scene("res://MainGame.tscn")
+		GlobalScript.Paper += 1000
 	self.queue_free()
 	return
 	

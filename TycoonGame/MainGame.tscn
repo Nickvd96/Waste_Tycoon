@@ -32,15 +32,15 @@ font_data = ExtResource( 14 )
 size = 56
 font_data = ExtResource( 14 )
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=4]
 size = 150
 font_data = ExtResource( 14 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=5]
 size = 120
 font_data = ExtResource( 19 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=6]
 size = 50
 font_data = ExtResource( 14 )
 
@@ -277,7 +277,7 @@ margin_left = -964.022
 margin_top = -106.169
 margin_right = 1398.98
 margin_bottom = 118.831
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 4 )
 text = "Deze Quest is nog niet beschikbaar"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -299,7 +299,7 @@ margin_left = -463.521
 margin_top = -593.688
 margin_right = 56.4789
 margin_bottom = -392.688
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 text = "QUEST"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -321,7 +321,7 @@ margin_left = 631.236
 margin_top = 59.9636
 margin_right = 1529.24
 margin_bottom = 260.964
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 text = "Sebastiaans concert"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -332,7 +332,7 @@ margin_left = 1927.09
 margin_top = 72.833
 margin_right = 2167.09
 margin_bottom = 129.833
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
 text = "200 plastic"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -343,7 +343,7 @@ margin_left = 1958.83
 margin_top = 168.077
 margin_right = 2198.83
 margin_bottom = 225.077
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
 text = "200 GFT"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -354,7 +354,7 @@ margin_left = 565.096
 margin_top = 168.077
 margin_right = 1694.1
 margin_bottom = 225.077
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
 text = "Ruim alle rotzooi op na het concert van sebastiaan"
 __meta__ = {
 "_edit_use_anchors_": false
