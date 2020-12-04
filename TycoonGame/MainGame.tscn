@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Img/Citybackground.jpg" type="Texture" id=1]
 [ext_resource path="res://Img/House1.png" type="Texture" id=2]
@@ -15,6 +15,8 @@
 [ext_resource path="res://QuestButton.gd" type="Script" id=13]
 [ext_resource path="res://Fonts/arial.ttf" type="DynamicFontData" id=14]
 [ext_resource path="res://Game Background Music.wav" type="AudioStream" id=15]
+[ext_resource path="res://Img/LogoGameV1.png" type="Texture" id=16]
+[ext_resource path="res://favicon.png" type="Texture" id=17]
 
 [sub_resource type="DynamicFont" id=1]
 size = 56
@@ -268,6 +270,38 @@ autostart = true
 stream = ExtResource( 15 )
 volume_db = -5.048
 autoplay = true
+
+[node name="Openshop" type="TextureButton" parent="."]
+margin_left = 74.4444
+margin_top = 305.726
+margin_right = 231.444
+margin_bottom = 462.726
+texture_normal = ExtResource( 16 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PopupShop" type="PopupMenu" parent="."]
+margin_right = 20.0
+margin_bottom = 20.0
+popup_exclusive = true
+
+[node name="Sprite" type="Sprite" parent="PopupShop"]
+position = Vector2( 1609.45, 631.911 )
+scale = Vector2( 5.95574, 2.28526 )
+texture = ExtResource( 17 )
+
+[node name="CloseShop" type="TextureButton" parent="PopupShop"]
+margin_left = 2569.3
+margin_top = 214.48
+margin_right = 2649.3
+margin_bottom = 294.48
+texture_normal = ExtResource( 16 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="UI/QuestButton" to="UI/QuestButton" method="_on_QuestButton_pressed"]
 [connection signal="pressed" from="ControlFactory1/House1" to="." method="_on_House1_pressed"]
 [connection signal="pressed" from="ControlFactory2/House2" to="." method="_on_House2_pressed"]
@@ -276,3 +310,4 @@ autoplay = true
 [connection signal="timeout" from="GFTTimer" to="." method="_on_GFTTimer_timeout"]
 [connection signal="timeout" from="PaperTimer" to="." method="_on_PaperTimer_timeout"]
 [connection signal="timeout" from="SaveResourcesPerSec" to="." method="_on_SaveResourcesPerSec_timeout"]
+[connection signal="pressed" from="Openshop" to="." method="_on_Openshop_pressed"]

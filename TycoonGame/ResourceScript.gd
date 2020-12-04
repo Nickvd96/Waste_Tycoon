@@ -74,3 +74,7 @@ func _on_SaveResourcesPerSec_timeout():
 
 
 
+
+
+func _on_Openshop_pressed():
+	pass # Replace with function body.
