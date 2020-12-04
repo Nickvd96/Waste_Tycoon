@@ -66,11 +66,26 @@ func _on_SaveResourcesPerSec_timeout():
 	SaveScript.SaveFile("main", "GFT", GlobalScript.GFT)
 	SaveScript.SaveFile("main", "Paper", GlobalScript.Paper)
 
+#questUI
+func _on_QuestButton_pressed():
+	$QuestControl/Quest.show()
+	
+	
+func _on_closeButton_pressed():
+	$QuestControl/Quest.hide()
+	
+	
+func _on_Quest1_pressed():
+	get_tree().change_scene("res://QuestScene.tscn")
 
 
 
 
 
 
+#shop
+func _on_Openshop_pressed():
+	$ShopControl/PopupShop.show()
 
-
+func _on_CloseShop_pressed():
+	$ShopControl/PopupShop.hide()

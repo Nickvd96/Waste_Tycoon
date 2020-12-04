@@ -17,7 +17,11 @@ _global_script_class_icons={
 
 config/name="Tycoon Game"
 run/main_scene="res://MainGame.tscn"
-config/icon="res://icon.png"
+config/icon="res://favicon.png"
+
+[audio]
+
+enable_audio_input=true
 
 [autoload]
 
@@ -26,6 +30,8 @@ GlobalScript="*res://GlobalScript.gd"
 
 [display]
 
+window/size/width=3040
+window/size/height=1440
 window/size/fullscreen=true
 window/stretch/mode="viewport"
 window/stretch/aspect="keep"
