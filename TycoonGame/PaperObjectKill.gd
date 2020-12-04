@@ -14,7 +14,8 @@ func _on_PaperObject_pressed():
 	if GlobalScript.QuestScore1 == 0 :
 		#print ("You have completed the quest!")
 		get_tree().change_scene("res://MainGame.tscn")
-		GlobalScript.Paper += 1000 
+		GlobalScript.Paper += 1000
+		GlobalScript.QuestScore1 = 4 
 	self.queue_free()
 	return
 

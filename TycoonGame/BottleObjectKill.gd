@@ -14,6 +14,7 @@ func _on_BottleObject_pressed():
 		#print ("You have completed the quest!")
 		get_tree().change_scene("res://MainGame.tscn")
 		GlobalScript.Paper += 1000
+		GlobalScript.QuestScore1 = 4
 	self.queue_free()
 	return
 	

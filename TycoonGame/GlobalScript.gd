@@ -1,5 +1,4 @@
 extends Node
-
 var Plastic = 0
 var GFT = 0
 var Paper = 0
