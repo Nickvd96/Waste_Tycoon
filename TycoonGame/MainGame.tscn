@@ -1,6 +1,6 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=27 format=2]
 
-[ext_resource path="res://Img/Citybackground.jpg" type="Texture" id=1]
+[ext_resource path="res://Img/SkylineV5.png" type="Texture" id=1]
 [ext_resource path="res://Img/House1.png" type="Texture" id=2]
 [ext_resource path="res://Img/House1clicked.png" type="Texture" id=3]
 [ext_resource path="res://Img/PlasticResources.png" type="Texture" id=4]
@@ -10,13 +10,16 @@
 [ext_resource path="res://Img/PlasticFactorySign.png" type="Texture" id=8]
 [ext_resource path="res://Img/GFTFactorySign.png" type="Texture" id=9]
 [ext_resource path="res://Img/PaperFactorySign.png" type="Texture" id=10]
-[ext_resource path="res://Img/PopMenuFactory1.png" type="Texture" id=11]
+[ext_resource path="res://Img/closeButton.png" type="Texture" id=11]
 [ext_resource path="res://Img/QuestIcon.png" type="Texture" id=12]
-[ext_resource path="res://QuestButton.gd" type="Script" id=13]
+[ext_resource path="res://Img/questbar1.png" type="Texture" id=13]
 [ext_resource path="res://Fonts/arial.ttf" type="DynamicFontData" id=14]
 [ext_resource path="res://Game Background Music.wav" type="AudioStream" id=15]
 [ext_resource path="res://Img/LogoGameV1.png" type="Texture" id=16]
 [ext_resource path="res://favicon.png" type="Texture" id=17]
+[ext_resource path="res://Img/Quest_UI.png" type="Texture" id=18]
+[ext_resource path="res://Gasalt-Regular.ttf" type="DynamicFontData" id=19]
+[ext_resource path="res://Img/QuestNietBeschikbaar.png" type="Texture" id=20]
 
 [sub_resource type="DynamicFont" id=1]
 size = 56
@@ -28,6 +31,18 @@ font_data = ExtResource( 14 )
 
 [sub_resource type="DynamicFont" id=3]
 size = 56
+font_data = ExtResource( 14 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 120
+font_data = ExtResource( 19 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 50
+font_data = ExtResource( 14 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 150
 font_data = ExtResource( 14 )
 
 [node name="Game" type="Node2D"]
@@ -44,8 +59,8 @@ __meta__ = {
 }
 
 [node name="Background" type="Sprite" parent="UI"]
-position = Vector2( 0, -72 )
-scale = Vector2( 3.16336, 3.29814 )
+position = Vector2( -91.5147, 6.81519 )
+scale = Vector2( 0.615773, 0.579614 )
 texture = ExtResource( 1 )
 centered = false
 __meta__ = {
@@ -80,7 +95,7 @@ __meta__ = {
 }
 
 [node name="SignFactory1" type="Sprite" parent="UI"]
-position = Vector2( 440.562, 1309.97 )
+position = Vector2( 415.364, 1143.66 )
 scale = Vector2( 0.0907107, 0.0907107 )
 texture = ExtResource( 8 )
 __meta__ = {
@@ -88,7 +103,7 @@ __meta__ = {
 }
 
 [node name="SignFactory2" type="Sprite" parent="UI"]
-position = Vector2( 1261.16, 1255.83 )
+position = Vector2( 1251.08, 1150 )
 scale = Vector2( 0.0837082, 0.0837082 )
 texture = ExtResource( 9 )
 __meta__ = {
@@ -96,27 +111,11 @@ __meta__ = {
 }
 
 [node name="SignFactory3" type="Sprite" parent="UI"]
-position = Vector2( 2134.15, 1263.76 )
+position = Vector2( 2048.48, 1142.81 )
 scale = Vector2( 0.0770845, 0.0770845 )
 texture = ExtResource( 10 )
 __meta__ = {
 "_editor_description_": ""
-}
-
-[node name="QuestButton" type="TextureButton" parent="UI"]
-anchor_left = 0.616325
-anchor_top = 0.0959885
-anchor_right = 0.682145
-anchor_bottom = 0.389451
-margin_left = 876.0
-margin_top = -142.0
-margin_right = 835.906
-margin_bottom = -269.586
-texture_normal = ExtResource( 12 )
-expand = true
-script = ExtResource( 13 )
-__meta__ = {
-"_edit_use_anchors_": true
 }
 
 [node name="ControlFactory1" type="Control" parent="."]
@@ -129,10 +128,10 @@ __meta__ = {
 }
 
 [node name="House1" type="TextureButton" parent="ControlFactory1"]
-anchor_left = 3.09509
-anchor_top = 1.67359
-anchor_right = 4.65905
-anchor_bottom = 2.17359
+anchor_left = 2.33328
+anchor_top = 1.23481
+anchor_right = 3.89724
+anchor_bottom = 1.73481
 margin_left = 0.276886
 margin_top = 272.299
 margin_right = 174.277
@@ -160,18 +159,6 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="PopupMenu" type="PopupMenu" parent="ControlFactory1"]
-margin_right = 20.0
-margin_bottom = 20.0
-
-[node name="Sprite" type="Sprite" parent="ControlFactory1/PopupMenu"]
-position = Vector2( 85.7499, 301.553 )
-scale = Vector2( 0.0628421, 0.0628421 )
-texture = ExtResource( 11 )
-__meta__ = {
-"_editor_description_": ""
-}
-
 [node name="ControlFactory2" type="Control" parent="."]
 margin_left = 387.0
 margin_top = 107.0
@@ -182,10 +169,10 @@ __meta__ = {
 }
 
 [node name="House2" type="TextureButton" parent="ControlFactory2"]
-anchor_left = 6.27116
-anchor_top = 1.65823
-anchor_right = 8.01969
-anchor_bottom = 2.22136
+anchor_left = 5.56384
+anchor_top = 1.2128
+anchor_right = 7.31237
+anchor_bottom = 1.77593
 margin_top = 271.22
 margin_right = 174.0
 margin_bottom = 401.22
@@ -238,10 +225,10 @@ __meta__ = {
 }
 
 [node name="House3" type="TextureButton" parent="ControlFactory3"]
-anchor_left = 8.99784
-anchor_top = 1.6027
-anchor_right = 10.7521
-anchor_bottom = 2.1596
+anchor_left = 8.47489
+anchor_top = 1.1512
+anchor_right = 10.2292
+anchor_bottom = 1.7081
 margin_left = 2.3783
 margin_top = 282.085
 margin_right = 176.378
@@ -251,6 +238,127 @@ texture_pressed = ExtResource( 3 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": true
+}
+
+[node name="QuestControl" type="Control" parent="."]
+margin_left = 1060.0
+margin_top = 93.0
+margin_right = 2994.0
+margin_bottom = 1332.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quest" type="PopupMenu" parent="QuestControl"]
+anchor_left = 0.665
+anchor_top = 0.498
+anchor_right = 0.665
+anchor_bottom = 0.498
+margin_left = -332.11
+margin_top = -0.0220337
+margin_right = -312.11
+margin_bottom = 19.978
+popup_exclusive = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="QuestControl/Quest"]
+position = Vector2( -132.29, 15.7146 )
+scale = Vector2( 0.791701, 0.621148 )
+texture = ExtResource( 18 )
+
+[node name="closeButton" type="TextureButton" parent="QuestControl/Quest"]
+margin_left = 844.092
+margin_top = 409.028
+margin_right = 1126.09
+margin_bottom = 691.028
+texture_normal = ExtResource( 11 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UITitle" type="Label" parent="QuestControl/Quest"]
+margin_left = -463.521
+margin_top = -593.688
+margin_right = 56.4788
+margin_bottom = -392.688
+custom_fonts/font = SubResource( 4 )
+text = "QUEST"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quest1" type="TextureButton" parent="QuestControl/Quest"]
+margin_left = -1298.48
+margin_top = -393.488
+margin_right = 969.524
+margin_bottom = -41.488
+texture_normal = ExtResource( 13 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuestTitle1" type="Label" parent="QuestControl/Quest/Quest1"]
+margin_left = 631.236
+margin_top = 59.9636
+margin_right = 1529.24
+margin_bottom = 260.964
+custom_fonts/font = SubResource( 4 )
+text = "Sebastiaans concert"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rewards" type="Label" parent="QuestControl/Quest/Quest1"]
+margin_left = 1927.09
+margin_top = 72.833
+margin_right = 2167.09
+margin_bottom = 129.833
+custom_fonts/font = SubResource( 5 )
+text = "200 plastic"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rewards2" type="Label" parent="QuestControl/Quest/Quest1"]
+margin_left = 1958.83
+margin_top = 168.077
+margin_right = 2198.83
+margin_bottom = 225.077
+custom_fonts/font = SubResource( 5 )
+text = "200 GFT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="uitlegQuest" type="Label" parent="QuestControl/Quest/Quest1"]
+margin_left = 565.096
+margin_top = 168.077
+margin_right = 1694.1
+margin_bottom = 225.077
+custom_fonts/font = SubResource( 5 )
+text = "Ruim alle rotzooi op na het concert van sebastiaan"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuestGrey" type="Sprite" parent="QuestControl/Quest"]
+position = Vector2( -153.978, 142.866 )
+scale = Vector2( 0.738756, 0.688612 )
+texture = ExtResource( 20 )
+
+[node name="Label" type="Label" parent="QuestControl/Quest/QuestGrey"]
+margin_left = -889.448
+margin_top = -106.169
+margin_right = 1196.55
+margin_bottom = 118.831
+custom_fonts/font = SubResource( 6 )
+text = "Deze quest is niet beschikbaar"
+__meta__ = {
+"_edit_use_anchors_": false
 }
 
 [node name="PlasticTimer" type="Timer" parent="."]
@@ -269,13 +377,12 @@ autostart = true
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 15 )
 volume_db = -5.048
-autoplay = true
 
 [node name="Openshop" type="TextureButton" parent="."]
-margin_left = 74.4444
-margin_top = 305.726
-margin_right = 231.444
-margin_bottom = 462.726
+margin_left = 131.518
+margin_top = 243.24
+margin_right = 288.518
+margin_bottom = 400.24
 texture_normal = ExtResource( 16 )
 expand = true
 __meta__ = {
@@ -286,10 +393,13 @@ __meta__ = {
 margin_right = 20.0
 margin_bottom = 20.0
 popup_exclusive = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Sprite" type="Sprite" parent="PopupShop"]
-position = Vector2( 1609.45, 631.911 )
-scale = Vector2( 5.95574, 2.28526 )
+position = Vector2( 564.685, 629.56 )
+scale = Vector2( 0.317788, 0.312733 )
 texture = ExtResource( 17 )
 
 [node name="CloseShop" type="TextureButton" parent="PopupShop"]
@@ -302,12 +412,29 @@ expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="pressed" from="UI/QuestButton" to="UI/QuestButton" method="_on_QuestButton_pressed"]
+
+[node name="QuestButton" type="TextureButton" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 2836.22
+margin_top = 19.1041
+margin_right = 2999.22
+margin_bottom = 331.104
+texture_normal = ExtResource( 12 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="ControlFactory1/House1" to="." method="_on_House1_pressed"]
 [connection signal="pressed" from="ControlFactory2/House2" to="." method="_on_House2_pressed"]
 [connection signal="pressed" from="ControlFactory3/House3" to="." method="_on_House3_pressed"]
+[connection signal="pressed" from="QuestControl/Quest/closeButton" to="." method="_on_closeButton_pressed"]
+[connection signal="pressed" from="QuestControl/Quest/Quest1" to="." method="_on_Quest1_pressed"]
 [connection signal="timeout" from="PlasticTimer" to="." method="_on_PlasticTimer_timeout"]
 [connection signal="timeout" from="GFTTimer" to="." method="_on_GFTTimer_timeout"]
 [connection signal="timeout" from="PaperTimer" to="." method="_on_PaperTimer_timeout"]
 [connection signal="timeout" from="SaveResourcesPerSec" to="." method="_on_SaveResourcesPerSec_timeout"]
 [connection signal="pressed" from="Openshop" to="." method="_on_Openshop_pressed"]
+[connection signal="pressed" from="QuestButton" to="." method="_on_QuestButton_pressed"]
