@@ -32,16 +32,16 @@ font_data = ExtResource( 14 )
 size = 56
 font_data = ExtResource( 14 )
 
+[sub_resource type="DynamicFont" id=6]
+size = 150
+font_data = ExtResource( 14 )
+
 [sub_resource type="DynamicFont" id=4]
 size = 120
 font_data = ExtResource( 19 )
 
 [sub_resource type="DynamicFont" id=5]
 size = 50
-font_data = ExtResource( 14 )
-
-[sub_resource type="DynamicFont" id=6]
-size = 150
 font_data = ExtResource( 14 )
 
 [node name="Game" type="Node2D"]
@@ -240,10 +240,10 @@ __meta__ = {
 }
 
 [node name="QuestControl" type="Control" parent="."]
-margin_left = 854.0
+margin_left = 2825.0
 margin_top = 93.0
-margin_right = 2994.0
-margin_bottom = 1307.0
+margin_right = 2972.0
+margin_bottom = 307.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -267,6 +267,22 @@ position = Vector2( -132.29, 15.7146 )
 scale = Vector2( 0.791701, 0.621148 )
 texture = ExtResource( 18 )
 
+[node name="QuestGrey" type="Sprite" parent="QuestControl/Quest"]
+position = Vector2( -153.978, 142.866 )
+scale = Vector2( 0.738756, 0.688612 )
+texture = ExtResource( 20 )
+
+[node name="Label" type="Label" parent="QuestControl/Quest/QuestGrey"]
+margin_left = -964.022
+margin_top = -106.169
+margin_right = 1398.98
+margin_bottom = 118.831
+custom_fonts/font = SubResource( 6 )
+text = "Deze Quest is nog niet beschikbaar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="closeButton" type="TextureButton" parent="QuestControl/Quest"]
 margin_left = 844.092
 margin_top = 409.028
@@ -281,7 +297,7 @@ __meta__ = {
 [node name="UITitle" type="Label" parent="QuestControl/Quest"]
 margin_left = -463.521
 margin_top = -593.688
-margin_right = 56.4788
+margin_right = 56.4789
 margin_bottom = -392.688
 custom_fonts/font = SubResource( 4 )
 text = "QUEST"
@@ -344,39 +360,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="QuestGrey" type="Sprite" parent="QuestControl/Quest"]
-position = Vector2( -153.978, 142.866 )
-scale = Vector2( 0.738756, 0.688612 )
-texture = ExtResource( 20 )
-
-[node name="Label" type="Label" parent="QuestControl/Quest/QuestGrey"]
-margin_left = -889.448
-margin_top = -106.169
-margin_right = 1196.55
-margin_bottom = 118.831
-custom_fonts/font = SubResource( 6 )
-text = "Deze quest is niet beschikbaar"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="PlasticTimer" type="Timer" parent="."]
-wait_time = 5.0
-autostart = true
-
-[node name="GFTTimer" type="Timer" parent="."]
-autostart = true
-
-[node name="PaperTimer" type="Timer" parent="."]
-autostart = true
-
-[node name="SaveResourcesPerSec" type="Timer" parent="."]
-autostart = true
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 15 )
-volume_db = -5.048
-
 [node name="ShopControl" type="Control" parent="."]
 anchor_left = 1.0
 anchor_top = 0.5
@@ -400,6 +383,7 @@ margin_top = -60.07
 margin_right = 218.5
 margin_bottom = 10.5
 popup_exclusive = true
+submenu_popup_delay = 0.5
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -423,6 +407,23 @@ expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="PlasticTimer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[node name="GFTTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="PaperTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="SaveResourcesPerSec" type="Timer" parent="."]
+autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+volume_db = -5.048
 
 [node name="Openshop" type="TextureButton" parent="."]
 margin_left = 2457.76
@@ -454,10 +455,10 @@ __meta__ = {
 [connection signal="pressed" from="ControlFactory3/House3" to="." method="_on_House3_pressed"]
 [connection signal="pressed" from="QuestControl/Quest/closeButton" to="." method="_on_closeButton_pressed"]
 [connection signal="pressed" from="QuestControl/Quest/Quest1" to="." method="_on_Quest1_pressed"]
+[connection signal="pressed" from="ShopControl/PopupShop/CloseShop" to="." method="_on_CloseShop_pressed"]
 [connection signal="timeout" from="PlasticTimer" to="." method="_on_PlasticTimer_timeout"]
 [connection signal="timeout" from="GFTTimer" to="." method="_on_GFTTimer_timeout"]
 [connection signal="timeout" from="PaperTimer" to="." method="_on_PaperTimer_timeout"]
 [connection signal="timeout" from="SaveResourcesPerSec" to="." method="_on_SaveResourcesPerSec_timeout"]
-[connection signal="pressed" from="ShopControl/PopupShop/CloseShop" to="." method="_on_CloseShop_pressed"]
 [connection signal="pressed" from="Openshop" to="." method="_on_Openshop_pressed"]
 [connection signal="pressed" from="QuestButton" to="." method="_on_QuestButton_pressed"]
