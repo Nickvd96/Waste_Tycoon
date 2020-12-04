@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Img/SkylineV5.png" type="Texture" id=1]
 [ext_resource path="res://Img/House1.png" type="Texture" id=2]
@@ -16,7 +16,6 @@
 [ext_resource path="res://Fonts/arial.ttf" type="DynamicFontData" id=14]
 [ext_resource path="res://Game Background Music.wav" type="AudioStream" id=15]
 [ext_resource path="res://Img/LogoGameV1.png" type="Texture" id=16]
-[ext_resource path="res://favicon.png" type="Texture" id=17]
 [ext_resource path="res://Img/Quest_UI.png" type="Texture" id=18]
 [ext_resource path="res://Gasalt-Regular.ttf" type="DynamicFontData" id=19]
 [ext_resource path="res://Img/QuestNietBeschikbaar.png" type="Texture" id=20]
@@ -95,7 +94,7 @@ __meta__ = {
 }
 
 [node name="SignFactory1" type="Sprite" parent="UI"]
-position = Vector2( 415.364, 1143.66 )
+position = Vector2( 142.331, 1137.31 )
 scale = Vector2( 0.0907107, 0.0907107 )
 texture = ExtResource( 8 )
 __meta__ = {
@@ -103,7 +102,7 @@ __meta__ = {
 }
 
 [node name="SignFactory2" type="Sprite" parent="UI"]
-position = Vector2( 1251.08, 1150 )
+position = Vector2( 1051.07, 1159.52 )
 scale = Vector2( 0.0837082, 0.0837082 )
 texture = ExtResource( 9 )
 __meta__ = {
@@ -111,7 +110,7 @@ __meta__ = {
 }
 
 [node name="SignFactory3" type="Sprite" parent="UI"]
-position = Vector2( 2048.48, 1142.81 )
+position = Vector2( 2077.05, 1174.56 )
 scale = Vector2( 0.0770845, 0.0770845 )
 texture = ExtResource( 10 )
 __meta__ = {
@@ -128,10 +127,10 @@ __meta__ = {
 }
 
 [node name="House1" type="TextureButton" parent="ControlFactory1"]
-anchor_left = 2.33328
-anchor_top = 1.23481
-anchor_right = 3.89724
-anchor_bottom = 1.73481
+anchor_left = 0.875083
+anchor_top = 1.36907
+anchor_right = 2.43904
+anchor_bottom = 1.86907
 margin_left = 0.276886
 margin_top = 272.299
 margin_right = 174.277
@@ -169,10 +168,10 @@ __meta__ = {
 }
 
 [node name="House2" type="TextureButton" parent="ControlFactory2"]
-anchor_left = 5.56384
-anchor_top = 1.2128
-anchor_right = 7.31237
-anchor_bottom = 1.77593
+anchor_left = 5.26678
+anchor_top = 1.3491
+anchor_right = 7.01531
+anchor_bottom = 1.91223
 margin_top = 271.22
 margin_right = 174.0
 margin_bottom = 401.22
@@ -225,10 +224,10 @@ __meta__ = {
 }
 
 [node name="House3" type="TextureButton" parent="ControlFactory3"]
-anchor_left = 8.47489
-anchor_top = 1.1512
-anchor_right = 10.2292
-anchor_bottom = 1.7081
+anchor_left = 8.67445
+anchor_top = 1.28188
+anchor_right = 10.4287
+anchor_bottom = 1.83878
 margin_left = 2.3783
 margin_top = 282.085
 margin_right = 176.378
@@ -241,10 +240,10 @@ __meta__ = {
 }
 
 [node name="QuestControl" type="Control" parent="."]
-margin_left = 1060.0
+margin_left = 854.0
 margin_top = 93.0
 margin_right = 2994.0
-margin_bottom = 1332.0
+margin_bottom = 1307.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -378,35 +377,59 @@ autostart = true
 stream = ExtResource( 15 )
 volume_db = -5.048
 
-[node name="Openshop" type="TextureButton" parent="."]
-margin_left = 131.518
-margin_top = 243.24
-margin_right = 288.518
-margin_bottom = 400.24
-texture_normal = ExtResource( 16 )
-expand = true
+[node name="ShopControl" type="Control" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -145.0
+margin_top = -102.0
+margin_right = -29.0
+margin_bottom = 65.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="PopupShop" type="PopupMenu" parent="."]
-margin_right = 20.0
-margin_bottom = 20.0
+[node name="PopupShop" type="PopupMenu" parent="ShopControl"]
+visible = true
+anchor_left = 0.5
+anchor_top = 0.454
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -101.5
+margin_top = -60.07
+margin_right = 218.5
+margin_bottom = 10.5
 popup_exclusive = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite" type="Sprite" parent="PopupShop"]
-position = Vector2( 564.685, 629.56 )
-scale = Vector2( 0.317788, 0.312733 )
-texture = ExtResource( 17 )
+[node name="Sprite" type="Sprite" parent="ShopControl/PopupShop"]
+position = Vector2( 255.141, 143.816 )
+scale = Vector2( 0.609341, 0.590189 )
+texture = ExtResource( 18 )
 
-[node name="CloseShop" type="TextureButton" parent="PopupShop"]
-margin_left = 2569.3
-margin_top = 214.48
-margin_right = 2649.3
-margin_bottom = 294.48
+[node name="CloseShop" type="TextureButton" parent="ShopControl/PopupShop"]
+anchor_left = -7.4
+anchor_top = -3.6
+anchor_right = -7.4
+anchor_bottom = -3.6
+margin_left = 3428.49
+margin_top = 1200.73
+margin_right = 3646.49
+margin_bottom = 1389.73
+texture_normal = ExtResource( 11 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Openshop" type="TextureButton" parent="."]
+margin_left = 131.518
+margin_top = 243.24
+margin_right = 288.518
+margin_bottom = 400.24
 texture_normal = ExtResource( 16 )
 expand = true
 __meta__ = {
@@ -436,5 +459,6 @@ __meta__ = {
 [connection signal="timeout" from="GFTTimer" to="." method="_on_GFTTimer_timeout"]
 [connection signal="timeout" from="PaperTimer" to="." method="_on_PaperTimer_timeout"]
 [connection signal="timeout" from="SaveResourcesPerSec" to="." method="_on_SaveResourcesPerSec_timeout"]
+[connection signal="pressed" from="ShopControl/PopupShop/CloseShop" to="." method="_on_CloseShop_pressed"]
 [connection signal="pressed" from="Openshop" to="." method="_on_Openshop_pressed"]
 [connection signal="pressed" from="QuestButton" to="." method="_on_QuestButton_pressed"]

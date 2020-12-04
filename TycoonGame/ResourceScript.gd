@@ -83,12 +83,9 @@ func _on_Quest1_pressed():
 
 
 
-
+#shop
 func _on_Openshop_pressed():
-	pass # Replace with function body.
+	$ShopControl/PopupShop.show()
 
-
-
-
-
-
+func _on_CloseShop_pressed():
+	$ShopControl/PopupShop.hide()
