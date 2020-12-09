@@ -1,6 +1,6 @@
 extends Node
 # voor het testen op mobiel moet res naar user worden veranderd
-var savePath = "user://save-file.cfg"
+var savePath = "res://save-file.cfg"
 var config = ConfigFile.new()
 var loadResponse = config.load(savePath)
 
