@@ -364,6 +364,21 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="ShopControl" type="Control" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 41.3279
+margin_top = -243.836
+margin_right = 152.328
+margin_bottom = -99.8365
+grow_horizontal = 2
+grow_vertical = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="PopupShop" type="PopupMenu" parent="."]
 margin_left = 104.735
 margin_top = -233.774
@@ -373,6 +388,17 @@ grow_horizontal = 2
 grow_vertical = 2
 popup_exclusive = true
 submenu_popup_delay = 0.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="PopupShop"]
+anchor_right = 0.278
+anchor_bottom = 1.565
+margin_left = 474.0
+margin_top = 577.0
+margin_right = 2257.04
+margin_bottom = 1415.56
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -418,21 +444,6 @@ __meta__ = {
 
 [node name="Levelupsound" type="AudioStreamPlayer" parent="PopupShop/UpgradePlastic"]
 stream = ExtResource( 23 )
-
-[node name="ShopControl" type="Control" parent="."]
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-margin_left = 41.3279
-margin_top = -243.836
-margin_right = 152.328
-margin_bottom = -99.8365
-grow_horizontal = 2
-grow_vertical = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="PlasticTimer" type="Timer" parent="."]
 autostart = true
