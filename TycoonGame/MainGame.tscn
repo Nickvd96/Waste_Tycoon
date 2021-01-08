@@ -362,60 +362,70 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ShopControl" type="Control" parent="."]
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-margin_left = -145.0
-margin_top = -102.0
-margin_right = -29.0
-margin_bottom = 65.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="PopupShop" type="PopupMenu" parent="ShopControl"]
-anchor_left = 0.5
-anchor_top = 0.454
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -101.5
-margin_top = -60.07
-margin_right = 218.5
-margin_bottom = 10.5
+[node name="PopupShop" type="PopupMenu" parent="."]
+visible = true
+margin_left = 104.735
+margin_top = -233.774
+margin_right = 424.735
+margin_bottom = -163.204
+grow_horizontal = 2
+grow_vertical = 2
 popup_exclusive = true
 submenu_popup_delay = 0.5
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite" type="Sprite" parent="ShopControl/PopupShop"]
-position = Vector2( 255.141, 143.816 )
+[node name="Sprite" type="Sprite" parent="PopupShop"]
+position = Vector2( 1406.23, 957.874 )
 scale = Vector2( 0.609341, 0.590189 )
 texture = ExtResource( 18 )
 
-[node name="CloseShop" type="TextureButton" parent="ShopControl/PopupShop"]
+[node name="CloseShop" type="TextureButton" parent="PopupShop"]
 anchor_left = -7.4
 anchor_top = -3.6
 anchor_right = -7.4
 anchor_bottom = -3.6
-margin_left = 3428.49
-margin_top = 1200.73
-margin_right = 3646.49
-margin_bottom = 1389.73
+margin_left = 4583.77
+margin_top = 721.582
+margin_right = 4801.77
+margin_bottom = 910.582
+grow_horizontal = 2
+grow_vertical = 2
 texture_normal = ExtResource( 11 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="UpgradePlastic" type="TextureButton" parent="ShopControl/PopupShop"]
-margin_right = 418.0
-margin_bottom = 400.0
+[node name="UpgradePlastic" type="TextureButton" parent="PopupShop"]
+anchor_left = -1.76
+anchor_top = -2.729
+anchor_right = -0.454
+anchor_bottom = 2.382
+margin_left = 1172.94
+margin_top = 835.682
+margin_right = 1070.02
+margin_bottom = 730.736
 texture_normal = ExtResource( 17 )
 expand = true
+stretch_mode = 4
 script = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShopControl" type="Control" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 41.3279
+margin_top = -243.836
+margin_right = 152.328
+margin_bottom = -99.8365
+grow_horizontal = 2
+grow_vertical = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -466,8 +476,8 @@ __meta__ = {
 [connection signal="pressed" from="ControlFactory3/House3" to="." method="_on_House3_pressed"]
 [connection signal="pressed" from="QuestControl/Quest/closeButton" to="." method="_on_closeButton_pressed"]
 [connection signal="pressed" from="QuestControl/Quest/Quest1" to="." method="_on_Quest1_pressed"]
-[connection signal="pressed" from="ShopControl/PopupShop/CloseShop" to="." method="_on_CloseShop_pressed"]
-[connection signal="pressed" from="ShopControl/PopupShop/UpgradePlastic" to="ShopControl/PopupShop/UpgradePlastic" method="_on_UpgradePlastic_pressed"]
+[connection signal="pressed" from="PopupShop/CloseShop" to="." method="_on_CloseShop_pressed"]
+[connection signal="pressed" from="PopupShop/UpgradePlastic" to="PopupShop/UpgradePlastic" method="_on_UpgradePlastic_pressed"]
 [connection signal="timeout" from="PlasticTimer" to="." method="_on_PlasticTimer_timeout"]
 [connection signal="timeout" from="GFTTimer" to="." method="_on_GFTTimer_timeout"]
 [connection signal="timeout" from="PaperTimer" to="." method="_on_PaperTimer_timeout"]

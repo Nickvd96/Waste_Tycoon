@@ -88,7 +88,7 @@ func _on_Quest1_pressed():
 
 #shop
 func _on_Openshop_pressed():
-	$ShopControl/PopupShop.show()
+	$PopupShop.show()
 
 func _on_CloseShop_pressed():
-	$ShopControl/PopupShop.hide()
+	$PopupShop.hide()
