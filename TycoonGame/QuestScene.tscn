@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Img/QuestSceneBG.png" type="Texture" id=1]
+[ext_resource path="res://Img/552809__bangcorrupt__chilled-loop.ogg" type="AudioStream" id=2]
 [ext_resource path="res://QuestChoice.gd" type="Script" id=3]
 [ext_resource path="res://Fonts/arial.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Img/DummyButtonQuest.png" type="Texture" id=5]
@@ -140,10 +141,15 @@ autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -8.078
+autoplay = true
 [connection signal="timeout" from="PlasticTimer" to="." method="_on_PlasticTimer_timeout"]
 [connection signal="timeout" from="GFTTimer" to="." method="_on_GFTTimer_timeout"]
 [connection signal="timeout" from="PaperTimer" to="." method="_on_PaperTimer_timeout"]
 [connection signal="timeout" from="SaveResourcesPerSec" to="." method="_on_SaveResourcesPerSec_timeout"]
 [connection signal="pressed" from="ExitButton" to="ExitButton" method="_on_ExitButton_pressed"]
-[connection signal="pressed" from="QuestStart" to="QuestStart" method="_on_ExitButton_pressed"]
 [connection signal="pressed" from="QuestStart" to="ExitButton" method="_on_QuestStart_pressed"]
+[connection signal="pressed" from="QuestStart" to="QuestStart" method="_on_ExitButton_pressed"]

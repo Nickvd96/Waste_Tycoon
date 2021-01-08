@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Img/can.png" type="Texture" id=1]
 [ext_resource path="res://Img/j8socf0o.bmp" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://MinecraftVleesKill.gd" type="Script" id=8]
 [ext_resource path="res://CanObjectKill.gd" type="Script" id=9]
 [ext_resource path="res://PaperObjectKill.gd" type="Script" id=10]
+[ext_resource path="res://Img/552809__bangcorrupt__chilled-loop.ogg" type="AudioStream" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 size = 250
@@ -100,6 +101,11 @@ text = "Score"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+volume_db = -8.078
+autoplay = true
 [connection signal="timeout" from="PlasticTimer" to="." method="_on_PlasticTimer_timeout"]
 [connection signal="timeout" from="GFTTimer" to="." method="_on_GFTTimer_timeout"]
 [connection signal="timeout" from="PaperTimer" to="." method="_on_PaperTimer_timeout"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Img/SkylineV5.png" type="Texture" id=1]
 [ext_resource path="res://Img/House1.png" type="Texture" id=2]
@@ -16,11 +16,11 @@
 [ext_resource path="res://Fonts/arial.ttf" type="DynamicFontData" id=14]
 [ext_resource path="res://Game Background Music.wav" type="AudioStream" id=15]
 [ext_resource path="res://Img/shopButton.png" type="Texture" id=16]
-[ext_resource path="res://favicon.png" type="Texture" id=17]
+[ext_resource path="res://Img/icons_UpgradeAnytime.png" type="Texture" id=17]
 [ext_resource path="res://Img/Quest_UI.png" type="Texture" id=18]
 [ext_resource path="res://Gasalt-Regular.ttf" type="DynamicFontData" id=19]
 [ext_resource path="res://Img/QuestNietBeschikbaar.png" type="Texture" id=20]
-[ext_resource path="res://UpgradePlastic.gd" type="Script" id=21]
+[ext_resource path="res://UpgradeShop.gd" type="Script" id=21]
 [ext_resource path="res://Clickingsound.wav" type="AudioStream" id=22]
 [ext_resource path="res://level_up.wav" type="AudioStream" id=23]
 
@@ -46,6 +46,10 @@ font_data = ExtResource( 19 )
 
 [sub_resource type="DynamicFont" id=6]
 size = 50
+font_data = ExtResource( 14 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 56
 font_data = ExtResource( 14 )
 
 [node name="Game" type="Node2D"]
@@ -413,10 +417,10 @@ anchor_left = -7.4
 anchor_top = -3.6
 anchor_right = -7.4
 anchor_bottom = -3.6
-margin_left = 4583.77
-margin_top = 721.582
-margin_right = 4801.77
-margin_bottom = 910.582
+margin_left = 4613.0
+margin_top = 695.052
+margin_right = 4793.0
+margin_bottom = 884.052
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = ExtResource( 11 )
@@ -430,10 +434,11 @@ anchor_left = -1.76
 anchor_top = -2.729
 anchor_right = -0.454
 anchor_bottom = 2.382
-margin_left = 1172.94
-margin_top = 835.682
-margin_right = 1070.02
-margin_bottom = 730.736
+margin_left = 1147.96
+margin_top = 959.903
+margin_right = 1259.04
+margin_bottom = 1084.22
+rect_pivot_offset = Vector2( 529, 0 )
 texture_normal = ExtResource( 17 )
 expand = true
 stretch_mode = 4
@@ -444,6 +449,120 @@ __meta__ = {
 
 [node name="Levelupsound" type="AudioStreamPlayer" parent="PopupShop/UpgradePlastic"]
 stream = ExtResource( 23 )
+
+[node name="Label" type="Label" parent="PopupShop"]
+margin_left = 688.569
+margin_top = 1292.34
+margin_right = 964.569
+margin_bottom = 1355.34
+rect_pivot_offset = Vector2( 435.193, -513.026 )
+custom_fonts/font = SubResource( 7 )
+text = "Level 1 > 2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="PopupShop"]
+margin_left = 594.815
+margin_top = 662.382
+margin_right = 1082.81
+margin_bottom = 725.382
+rect_pivot_offset = Vector2( 530.947, 116.935 )
+custom_fonts/font = SubResource( 7 )
+text = "Plastic per seconde"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UpgradeGFT" type="TextureButton" parent="PopupShop"]
+anchor_left = -1.76
+anchor_top = -2.729
+anchor_right = -0.454
+anchor_bottom = 2.382
+margin_left = 1702.33
+margin_top = 964.943
+margin_right = 1813.41
+margin_bottom = 1089.26
+rect_pivot_offset = Vector2( 529, 0 )
+texture_normal = ExtResource( 17 )
+expand = true
+stretch_mode = 4
+script = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Levelupsound" type="AudioStreamPlayer" parent="PopupShop/UpgradeGFT"]
+stream = ExtResource( 23 )
+
+[node name="Label3" type="Label" parent="PopupShop"]
+margin_left = 1248.93
+margin_top = 1297.38
+margin_right = 1524.93
+margin_bottom = 1360.38
+rect_pivot_offset = Vector2( 435.193, -513.026 )
+custom_fonts/font = SubResource( 7 )
+text = "Level 1 > 2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="PopupShop"]
+margin_left = 1174.72
+margin_top = 664.48
+margin_right = 1610.72
+margin_bottom = 727.48
+rect_pivot_offset = Vector2( 530.947, 116.935 )
+custom_fonts/font = SubResource( 7 )
+text = "GFT per seconde"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UpgradePaper" type="TextureButton" parent="PopupShop"]
+anchor_left = -1.76
+anchor_top = -2.729
+anchor_right = -0.454
+anchor_bottom = 2.382
+margin_left = 2261.73
+margin_top = 962.423
+margin_right = 2372.81
+margin_bottom = 1086.74
+rect_pivot_offset = Vector2( 529, 0 )
+texture_normal = ExtResource( 17 )
+expand = true
+stretch_mode = 4
+script = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Levelupsound" type="AudioStreamPlayer" parent="PopupShop/UpgradePaper"]
+stream = ExtResource( 23 )
+
+[node name="Label5" type="Label" parent="PopupShop"]
+margin_left = 1804.34
+margin_top = 1294.86
+margin_right = 2080.34
+margin_bottom = 1357.86
+rect_pivot_offset = Vector2( 435.193, -513.026 )
+custom_fonts/font = SubResource( 7 )
+text = "Level 1 > 2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Label" parent="PopupShop"]
+margin_left = 1710.58
+margin_top = 662.383
+margin_right = 2198.58
+margin_bottom = 725.383
+rect_pivot_offset = Vector2( 530.947, 116.935 )
+custom_fonts/font = SubResource( 7 )
+text = "Papier per seconde"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="PlasticTimer" type="Timer" parent="."]
 autostart = true
@@ -497,6 +616,10 @@ __meta__ = {
 [connection signal="pressed" from="QuestControl/Quest/Quest1" to="." method="_on_Quest1_pressed"]
 [connection signal="pressed" from="PopupShop/CloseShop" to="." method="_on_CloseShop_pressed"]
 [connection signal="pressed" from="PopupShop/UpgradePlastic" to="PopupShop/UpgradePlastic" method="_on_UpgradePlastic_pressed"]
+[connection signal="pressed" from="PopupShop/UpgradeGFT" to="PopupShop/UpgradeGFT" method="_on_UpgradePlastic_pressed"]
+[connection signal="pressed" from="PopupShop/UpgradeGFT" to="PopupShop/UpgradeGFT" method="_on_UpgradeGFT_pressed"]
+[connection signal="pressed" from="PopupShop/UpgradePaper" to="PopupShop/UpgradePaper" method="_on_UpgradePlastic_pressed"]
+[connection signal="pressed" from="PopupShop/UpgradePaper" to="PopupShop/UpgradePaper" method="_on_UpgradePaper_pressed"]
 [connection signal="timeout" from="PlasticTimer" to="." method="_on_PlasticTimer_timeout"]
 [connection signal="timeout" from="GFTTimer" to="." method="_on_GFTTimer_timeout"]
 [connection signal="timeout" from="PaperTimer" to="." method="_on_PaperTimer_timeout"]
