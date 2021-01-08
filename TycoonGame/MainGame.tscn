@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Img/SkylineV5.png" type="Texture" id=1]
 [ext_resource path="res://Img/House1.png" type="Texture" id=2]
@@ -16,9 +16,11 @@
 [ext_resource path="res://Fonts/arial.ttf" type="DynamicFontData" id=14]
 [ext_resource path="res://Game Background Music.wav" type="AudioStream" id=15]
 [ext_resource path="res://Img/shopButton.png" type="Texture" id=16]
+[ext_resource path="res://favicon.png" type="Texture" id=17]
 [ext_resource path="res://Img/Quest_UI.png" type="Texture" id=18]
 [ext_resource path="res://Gasalt-Regular.ttf" type="DynamicFontData" id=19]
 [ext_resource path="res://Img/QuestNietBeschikbaar.png" type="Texture" id=20]
+[ext_resource path="res://UpgradePlastic.gd" type="Script" id=21]
 
 [sub_resource type="DynamicFont" id=1]
 size = 56
@@ -408,8 +410,17 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="UpgradePlastic" type="TextureButton" parent="ShopControl/PopupShop"]
+margin_right = 418.0
+margin_bottom = 400.0
+texture_normal = ExtResource( 17 )
+expand = true
+script = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="PlasticTimer" type="Timer" parent="."]
-wait_time = 5.0
 autostart = true
 
 [node name="GFTTimer" type="Timer" parent="."]
@@ -456,6 +467,7 @@ __meta__ = {
 [connection signal="pressed" from="QuestControl/Quest/closeButton" to="." method="_on_closeButton_pressed"]
 [connection signal="pressed" from="QuestControl/Quest/Quest1" to="." method="_on_Quest1_pressed"]
 [connection signal="pressed" from="ShopControl/PopupShop/CloseShop" to="." method="_on_CloseShop_pressed"]
+[connection signal="pressed" from="ShopControl/PopupShop/UpgradePlastic" to="ShopControl/PopupShop/UpgradePlastic" method="_on_UpgradePlastic_pressed"]
 [connection signal="timeout" from="PlasticTimer" to="." method="_on_PlasticTimer_timeout"]
 [connection signal="timeout" from="GFTTimer" to="." method="_on_GFTTimer_timeout"]
 [connection signal="timeout" from="PaperTimer" to="." method="_on_PaperTimer_timeout"]
