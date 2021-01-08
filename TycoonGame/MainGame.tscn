@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://Img/SkylineV5.png" type="Texture" id=1]
 [ext_resource path="res://Img/House1.png" type="Texture" id=2]
@@ -21,6 +21,8 @@
 [ext_resource path="res://Gasalt-Regular.ttf" type="DynamicFontData" id=19]
 [ext_resource path="res://Img/QuestNietBeschikbaar.png" type="Texture" id=20]
 [ext_resource path="res://UpgradePlastic.gd" type="Script" id=21]
+[ext_resource path="res://Clickingsound.wav" type="AudioStream" id=22]
+[ext_resource path="res://level_up.wav" type="AudioStream" id=23]
 
 [sub_resource type="DynamicFont" id=1]
 size = 56
@@ -69,7 +71,7 @@ __meta__ = {
 }
 
 [node name="ResourcesBarPlastic" type="Sprite" parent="UI"]
-position = Vector2( 792, 370 )
+position = Vector2( 1180, 401 )
 scale = Vector2( 0.80584, 0.80584 )
 texture = ExtResource( 4 )
 offset = Vector2( -484.499, -313.037 )
@@ -78,7 +80,7 @@ __meta__ = {
 }
 
 [node name="ResourcesBarGFT" type="Sprite" parent="UI"]
-position = Vector2( 1496, 354 )
+position = Vector2( 1884, 385 )
 scale = Vector2( 0.766925, 0.766925 )
 texture = ExtResource( 6 )
 offset = Vector2( -484.499, -313.037 )
@@ -87,7 +89,7 @@ __meta__ = {
 }
 
 [node name="ResourcesBarPaper" type="Sprite" parent="UI"]
-position = Vector2( 2232, 362 )
+position = Vector2( 2620, 393 )
 scale = Vector2( 0.788263, 0.788264 )
 texture = ExtResource( 7 )
 offset = Vector2( -484.499, -313.037 )
@@ -145,10 +147,10 @@ __meta__ = {
 }
 
 [node name="Plasticlabel" type="Label" parent="ControlFactory1"]
-anchor_left = 1.26326
-anchor_top = 0.121891
-anchor_right = 2.46094
-anchor_bottom = 0.196518
+anchor_left = 3.51907
+anchor_top = 0.196518
+anchor_right = 5.0714
+anchor_bottom = 0.28607
 margin_left = -31.2806
 margin_top = -71.0
 margin_right = 148.719
@@ -185,10 +187,10 @@ __meta__ = {
 }
 
 [node name="GFTLabel" type="Label" parent="ControlFactory2"]
-anchor_left = 4.31776
-anchor_top = 0.122436
-anchor_right = 5.65694
-anchor_bottom = 0.213346
+anchor_left = 6.58677
+anchor_top = 0.198194
+anchor_right = 7.92595
+anchor_bottom = 0.289104
 margin_left = -105.118
 margin_top = -71.5115
 margin_right = 39.8821
@@ -210,10 +212,10 @@ __meta__ = {
 }
 
 [node name="Paperlabel" type="Label" parent="ControlFactory3"]
-anchor_left = 7.10171
-anchor_top = 0.133944
-anchor_right = 8.21028
-anchor_bottom = 0.221111
+anchor_left = 9.31885
+anchor_top = 0.206583
+anchor_right = 10.4274
+anchor_bottom = 0.29375
 margin_left = -168.29
 margin_top = -60.9518
 margin_right = -33.29
@@ -363,7 +365,6 @@ __meta__ = {
 }
 
 [node name="PopupShop" type="PopupMenu" parent="."]
-visible = true
 margin_left = 104.735
 margin_top = -233.774
 margin_right = 424.735
@@ -415,6 +416,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Levelupsound" type="AudioStreamPlayer" parent="PopupShop/UpgradePlastic"]
+stream = ExtResource( 23 )
+
 [node name="ShopControl" type="Control" parent="."]
 anchor_left = 1.0
 anchor_top = 0.5
@@ -444,13 +448,17 @@ autostart = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 15 )
-volume_db = -5.048
+volume_db = 1.01
+autoplay = true
+
+[node name="Clickingsound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 22 )
 
 [node name="Openshop" type="TextureButton" parent="."]
-margin_left = 2457.76
-margin_top = 43.665
-margin_right = 2724.76
-margin_bottom = 310.665
+margin_left = 63.9597
+margin_top = 22.1406
+margin_right = 330.96
+margin_bottom = 289.141
 texture_normal = ExtResource( 16 )
 expand = true
 __meta__ = {
@@ -462,10 +470,10 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-margin_left = 2836.22
-margin_top = 19.1041
-margin_right = 2999.22
-margin_bottom = 331.104
+margin_left = 2804.05
+margin_top = -6.59512
+margin_right = 2967.05
+margin_bottom = 305.405
 texture_normal = ExtResource( 12 )
 expand = true
 __meta__ = {

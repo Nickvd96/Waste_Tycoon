@@ -20,5 +20,5 @@ func _on_UpgradePlastic_pressed():
 	if GlobalScript.Plastic > 999 :
 		GlobalScript.Plastic = GlobalScript.Plastic - 1000
 		GlobalScript.PlasticPerSecond = GlobalScript.PlasticPerSecond + 1
-	else :
-		return
+		$Levelupsound.play()
+		#get_node("/root/Levelup").play()

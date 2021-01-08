@@ -18,6 +18,7 @@ func _ready():
 #Gebouw 1
 func _on_House1_pressed():
 	GlobalScript.Plastic += 1
+	$Clickingsound.play()
 	$ControlFactory1/Plasticlabel.text = str(GlobalScript.Plastic)
 	
 	var click = load("res://PopupClickMessage.tscn")
@@ -27,6 +28,7 @@ func _on_House1_pressed():
 
 func _on_House2_pressed():
 	GlobalScript.GFT += 1
+	$Clickingsound.play()
 	$ControlFactory2/GFTLabel.text = str (GlobalScript.GFT)
 	
 	var click = load("res://PopupClickMessage.tscn")
@@ -36,6 +38,7 @@ func _on_House2_pressed():
 
 func _on_House3_pressed():
 	GlobalScript.Paper += 1
+	$Clickingsound.play()
 	$ControlFactory3/Paperlabel.text = str(GlobalScript.Paper)
 	
 	var click = load("res://PopupClickMessage.tscn")
