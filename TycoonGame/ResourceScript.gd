@@ -65,6 +65,9 @@ func _on_SaveResourcesPerSec_timeout():
 	SaveScript.SaveFile("main", "Plastic", GlobalScript.Plastic)
 	SaveScript.SaveFile("main", "GFT", GlobalScript.GFT)
 	SaveScript.SaveFile("main", "Paper", GlobalScript.Paper)
+	SaveScript.SaveFile("main", "PlasticPerSecond", GlobalScript.PlasticPerSecond)
+	SaveScript.SaveFile("main", "GFTPerSecond", GlobalScript.GFTPerSecond)
+	SaveScript.SaveFile("main", "PaperPerSecond", GlobalScript.PaperPerSecond)
 
 #questUI
 func _on_QuestButton_pressed():
