@@ -1,25 +1,15 @@
 extends Node
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
 func _on_CanObject_pressed():
+	#check resterende afval, als dit 0 is, ga terug naar main en ontvang reward. questscore - 1
 	GlobalScript.QuestScore1 = GlobalScript.QuestScore1 -1
-	#print(GlobalScript.QuestScore1)
-	#print("Blikje")
 	if GlobalScript.QuestScore1 == 0 :
-		#print ("You have completed the quest!")
 		get_tree().change_scene("res://MainGame.tscn")
 		GlobalScript.Paper += 2000
 		GlobalScript.GFT += 2000
 		GlobalScript.Plastic += 2000
 		GlobalScript.QuestScore1 = 4
 	self.queue_free()
+	#verwijder object
 	return
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass

@@ -39,23 +39,23 @@ font_data = ExtResource( 14 )
 size = 120
 font_data = ExtResource( 14 )
 
-[sub_resource type="DynamicFont" id=9]
+[sub_resource type="DynamicFont" id=5]
 size = 84
 font_data = ExtResource( 14 )
 
-[sub_resource type="DynamicFont" id=8]
+[sub_resource type="DynamicFont" id=6]
 size = 112
 font_data = ExtResource( 14 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=7]
 size = 96
 font_data = ExtResource( 14 )
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=8]
 size = 50
 font_data = ExtResource( 14 )
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=9]
 size = 56
 font_data = ExtResource( 14 )
 
@@ -303,7 +303,7 @@ margin_left = -657.97
 margin_top = 34.5372
 margin_right = 901.03
 margin_bottom = 169.537
-custom_fonts/font = SubResource( 9 )
+custom_fonts/font = SubResource( 5 )
 text = "Check op een later moment terug!"
 autowrap = true
 __meta__ = {
@@ -327,7 +327,7 @@ margin_top = -575.299
 margin_right = 227.608
 margin_bottom = -430.299
 rect_pivot_offset = Vector2( 435.193, -513.026 )
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 6 )
 text = "Quests"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -349,7 +349,7 @@ margin_left = 655.236
 margin_top = 68.9636
 margin_right = 1553.24
 margin_bottom = 269.964
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 7 )
 text = "Sebastiaans concert"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -360,7 +360,7 @@ margin_left = 1836.31
 margin_top = 66.8149
 margin_right = 2104.31
 margin_bottom = 123.815
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 8 )
 text = "2000 plastic"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -371,7 +371,7 @@ margin_left = 1838.05
 margin_top = 135.729
 margin_right = 2078.05
 margin_bottom = 192.729
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 8 )
 text = "2000 GFT"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -382,7 +382,7 @@ margin_left = 1838.05
 margin_top = 203.729
 margin_right = 2093.05
 margin_bottom = 260.729
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 8 )
 text = "2000 paper"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -393,7 +393,7 @@ margin_left = 565.096
 margin_top = 189.077
 margin_right = 1694.1
 margin_bottom = 246.077
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 8 )
 text = "Ruim alle rotzooi op na het concert van sebastiaan"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -487,7 +487,7 @@ margin_top = 1292.34
 margin_right = 964.569
 margin_bottom = 1355.34
 rect_pivot_offset = Vector2( 435.193, -513.026 )
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 9 )
 text = "Level 1 > 2"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -499,7 +499,7 @@ margin_top = 386.941
 margin_right = 1709.43
 margin_bottom = 531.941
 rect_pivot_offset = Vector2( 435.193, -513.026 )
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 6 )
 text = "Upgrade shop"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -511,7 +511,7 @@ margin_top = 662.382
 margin_right = 1082.81
 margin_bottom = 725.382
 rect_pivot_offset = Vector2( 530.947, 116.935 )
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 9 )
 text = "Plastic per seconde"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -544,7 +544,7 @@ margin_top = 1297.38
 margin_right = 1524.93
 margin_bottom = 1360.38
 rect_pivot_offset = Vector2( 435.193, -513.026 )
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 9 )
 text = "Level 1 > 2"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -556,7 +556,7 @@ margin_top = 664.48
 margin_right = 1610.72
 margin_bottom = 727.48
 rect_pivot_offset = Vector2( 530.947, 116.935 )
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 9 )
 text = "GFT per seconde"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -589,7 +589,7 @@ margin_top = 1294.86
 margin_right = 2080.34
 margin_bottom = 1357.86
 rect_pivot_offset = Vector2( 435.193, -513.026 )
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 9 )
 text = "Level 1 > 2"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -601,7 +601,7 @@ margin_top = 662.383
 margin_right = 2198.58
 margin_bottom = 725.383
 rect_pivot_offset = Vector2( 530.947, 116.935 )
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 9 )
 text = "Papier per seconde"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -659,8 +659,8 @@ __meta__ = {
 [connection signal="pressed" from="QuestControl/Quest/Quest1" to="." method="_on_Quest1_pressed"]
 [connection signal="pressed" from="PopupShop/CloseShop" to="." method="_on_CloseShop_pressed"]
 [connection signal="pressed" from="PopupShop/UpgradePlastic" to="PopupShop/UpgradePlastic" method="_on_UpgradePlastic_pressed"]
-[connection signal="pressed" from="PopupShop/UpgradeGFT" to="PopupShop/UpgradeGFT" method="_on_UpgradePlastic_pressed"]
 [connection signal="pressed" from="PopupShop/UpgradeGFT" to="PopupShop/UpgradeGFT" method="_on_UpgradeGFT_pressed"]
+[connection signal="pressed" from="PopupShop/UpgradeGFT" to="PopupShop/UpgradeGFT" method="_on_UpgradePlastic_pressed"]
 [connection signal="pressed" from="PopupShop/UpgradePaper" to="PopupShop/UpgradePaper" method="_on_UpgradePlastic_pressed"]
 [connection signal="pressed" from="PopupShop/UpgradePaper" to="PopupShop/UpgradePaper" method="_on_UpgradePaper_pressed"]
 [connection signal="timeout" from="PlasticTimer" to="." method="_on_PlasticTimer_timeout"]

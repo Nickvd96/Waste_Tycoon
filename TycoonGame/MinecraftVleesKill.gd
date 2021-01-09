@@ -1,25 +1,16 @@
 extends Node
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
 func _on_MinecraftVlees_pressed():
-	GlobalScript.QuestScore1 = GlobalScript.QuestScore1 -1
-	#print(GlobalScript.QuestScore1)
-	#print("Minecraft vlees")
+	#check resterende afval, als dit 0 is, ga terug naar main en ontvang reward. questscore - 1
+	GlobalScript.QuestScore1 = GlobalScript.QuestScore1 - 1
 	if GlobalScript.QuestScore1 == 0 :
-		#print ("You have completed the quest!")
 		get_tree().change_scene("res://MainGame.tscn")
 		GlobalScript.Paper += 2000
 		GlobalScript.GFT += 2000
 		GlobalScript.Plastic += 2000
 		GlobalScript.QuestScore1 = 4
+	#verwijder object
 	self.queue_free()
 	return
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass

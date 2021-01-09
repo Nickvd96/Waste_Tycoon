@@ -65,6 +65,7 @@ func _on_PaperTimer_timeout():
 
 
 func _on_SaveResourcesPerSec_timeout():
+	#sla de resources en resources per seconde op
 	SaveScript.SaveFile("main", "Plastic", GlobalScript.Plastic)
 	SaveScript.SaveFile("main", "GFT", GlobalScript.GFT)
 	SaveScript.SaveFile("main", "Paper", GlobalScript.Paper)
@@ -72,15 +73,15 @@ func _on_SaveResourcesPerSec_timeout():
 	SaveScript.SaveFile("main", "GFTPerSecond", GlobalScript.GFTPerSecond)
 	SaveScript.SaveFile("main", "PaperPerSecond", GlobalScript.PaperPerSecond)
 
-#questUI
+#laat de quest ui zien bij een klik op de knop 
 func _on_QuestButton_pressed():
 	$QuestControl/Quest.show()
 	
-	
+	#sluit de quest ui bij een klik op het kruis
 func _on_closeButton_pressed():
 	$QuestControl/Quest.hide()
 	
-	
+	#verander de scene als er op quest geklikt wordt
 func _on_Quest1_pressed():
 	get_tree().change_scene("res://QuestScene.tscn")
 
@@ -89,9 +90,10 @@ func _on_Quest1_pressed():
 
 
 
-#shop
+#open de shop bij een klik op de knop
 func _on_Openshop_pressed():
 	$PopupShop.show()
 
+#sluit de shop bij een klik op het kruis
 func _on_CloseShop_pressed():
 	$PopupShop.hide()

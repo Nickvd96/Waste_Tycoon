@@ -17,6 +17,7 @@ func _ready():
 
 
 func _on_UpgradePlastic_pressed():
+	#check of er genoeg resources zijn om te upgraden, wis daarna 1000 resources en upgrade resources per seconde
 	if GlobalScript.Plastic > 999 :
 		GlobalScript.Plastic = GlobalScript.Plastic - 1000
 		GlobalScript.PlasticPerSecond = GlobalScript.PlasticPerSecond + 1
@@ -24,6 +25,7 @@ func _on_UpgradePlastic_pressed():
 
 
 func _on_UpgradeGFT_pressed():
+	#check of er genoeg resources zijn om te upgraden, wis daarna 1000 resources en upgrade resources per seconde
 	if GlobalScript.GFT > 999 :
 		GlobalScript.GFT = GlobalScript.GFT - 1000
 		GlobalScript.GFTPerSecond = GlobalScript.GFTPerSecond + 1
@@ -31,6 +33,7 @@ func _on_UpgradeGFT_pressed():
 
 
 func _on_UpgradePaper_pressed():
+	#check of er genoeg resources zijn om te upgraden, wis daarna 1000 resources en upgrade resources per seconde
 	if GlobalScript.Paper > 999 :
 		GlobalScript.Paper = GlobalScript.Paper - 1000
 		GlobalScript.PaperPerSecond = GlobalScript.PaperPerSecond + 1
