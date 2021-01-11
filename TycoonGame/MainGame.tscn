@@ -660,8 +660,6 @@ __meta__ = {
 [connection signal="pressed" from="PopupShop/CloseShop" to="." method="_on_CloseShop_pressed"]
 [connection signal="pressed" from="PopupShop/UpgradePlastic" to="PopupShop/UpgradePlastic" method="_on_UpgradePlastic_pressed"]
 [connection signal="pressed" from="PopupShop/UpgradeGFT" to="PopupShop/UpgradeGFT" method="_on_UpgradeGFT_pressed"]
-[connection signal="pressed" from="PopupShop/UpgradeGFT" to="PopupShop/UpgradeGFT" method="_on_UpgradePlastic_pressed"]
-[connection signal="pressed" from="PopupShop/UpgradePaper" to="PopupShop/UpgradePaper" method="_on_UpgradePlastic_pressed"]
 [connection signal="pressed" from="PopupShop/UpgradePaper" to="PopupShop/UpgradePaper" method="_on_UpgradePaper_pressed"]
 [connection signal="timeout" from="PlasticTimer" to="." method="_on_PlasticTimer_timeout"]
 [connection signal="timeout" from="GFTTimer" to="." method="_on_GFTTimer_timeout"]
