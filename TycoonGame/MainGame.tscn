@@ -288,10 +288,10 @@ scale = Vector2( 0.698708, 0.665843 )
 texture = ExtResource( 20 )
 
 [node name="Label" type="Label" parent="QuestControl/Quest/QuestGrey"]
-margin_left = -884.0
-margin_top = -114.0
-margin_right = 1404.0
-margin_bottom = 21.0
+margin_left = -790.342
+margin_top = -125.569
+margin_right = 1093.66
+margin_bottom = 9.43115
 custom_fonts/font = SubResource( 4 )
 text = "Deze quest is nog niet beschikbaar"
 __meta__ = {
@@ -299,10 +299,10 @@ __meta__ = {
 }
 
 [node name="Label2" type="Label" parent="QuestControl/Quest/QuestGrey"]
-margin_left = -657.97
-margin_top = 34.5372
-margin_right = 901.03
-margin_bottom = 169.537
+margin_left = -528.138
+margin_top = 30.7527
+margin_right = 1030.86
+margin_bottom = 165.752
 custom_fonts/font = SubResource( 5 )
 text = "Check op een later moment terug!"
 autowrap = true
@@ -345,12 +345,12 @@ __meta__ = {
 }
 
 [node name="QuestTitle1" type="Label" parent="QuestControl/Quest/Quest1"]
-margin_left = 655.236
-margin_top = 68.9636
-margin_right = 1553.24
-margin_bottom = 269.964
+margin_left = 887.0
+margin_top = 69.0
+margin_right = 1490.0
+margin_bottom = 189.0
 custom_fonts/font = SubResource( 7 )
-text = "Sebastiaans concert"
+text = "Fontys Purple"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -389,12 +389,12 @@ __meta__ = {
 }
 
 [node name="uitlegQuest" type="Label" parent="QuestControl/Quest/Quest1"]
-margin_left = 565.096
-margin_top = 189.077
-margin_right = 1694.1
-margin_bottom = 246.077
+margin_left = 615.397
+margin_top = 186.48
+margin_right = 1744.4
+margin_bottom = 243.48
 custom_fonts/font = SubResource( 8 )
-text = "Ruim alle rotzooi op na het concert van sebastiaan"
+text = "Ruim al het afval op van het Fontys Purple festival"
 __meta__ = {
 "_edit_use_anchors_": false
 }
