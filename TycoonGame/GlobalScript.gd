@@ -1,15 +1,18 @@
 extends Node
+
+#Definieert de standaardwaardes voor elk recyclemiddel
 var Plastic = 0
 var GFT = 0
 var Paper = 0
 
+#Voegt 1 van elk recyclemiddel toe per seconde
 var PlasticPerSecond = 1
 var GFTPerSecond = 1
 var PaperPerSecond = 1
 
 var QuestScore1 = 4
 
-
+#Geeft de nieuwe waardes door aan het savescript
 func _ready():
 	#inladen van savefile 
 	Plastic = SaveScript.LoadFile("main", "Plastic", 0)
