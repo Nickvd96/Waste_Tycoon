@@ -5,7 +5,7 @@ extends Node
 # var a = 2
 # var b = "text"
 
-
+#Geeft door aan de save file dat 'papier' is opgeruimd in de quest
 func _on_PaperObject_pressed():
 	#questScore = questScore -1
 	GlobalScript.QuestScore1 = GlobalScript.QuestScore1 -1

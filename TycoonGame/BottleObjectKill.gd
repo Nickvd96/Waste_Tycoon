@@ -5,7 +5,7 @@ extends Node
 # var a = 2
 # var b = "text"
 
-
+#Geeft door aan de save file dat 'flesje' is opgeruimd in de quest
 func _on_BottleObject_pressed():
 	GlobalScript.QuestScore1 = GlobalScript.QuestScore1 -1
 	#print(GlobalScript.QuestScore1)
