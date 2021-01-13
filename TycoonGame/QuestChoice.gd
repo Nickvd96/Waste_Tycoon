@@ -15,10 +15,10 @@ func _ready():
 #func _process(delta):
 #	pass
 
-
+#Gaat terug naar de MainGame als de gebruiker de quest annuleert
 func _on_ExitButton_pressed():
 	get_tree().change_scene("res://MainGame.tscn")
 
-
+#Start de 'zoek afval' quest
 func _on_QuestStart_pressed():
 	get_tree().change_scene("res://SearchQuest.tscn")
