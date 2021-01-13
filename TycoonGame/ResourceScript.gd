@@ -15,7 +15,7 @@ func _ready():
 
 #GEBOUWEN
 
-#Gebouw 1
+#Voegt plastic toe bij het tikken op gebouw 1
 func _on_House1_pressed():
 	GlobalScript.Plastic += 1
 	$ControlFactory1/Plasticlabel.text = str(GlobalScript.Plastic)
@@ -25,6 +25,7 @@ func _on_House1_pressed():
 	clickInstance.position = get_local_mouse_position()
 	add_child(clickInstance)
 
+#Voegt GFT toe bij het tikken op gebouw 1
 func _on_House2_pressed():
 	GlobalScript.GFT += 1
 	$ControlFactory2/GFTLabel.text = str (GlobalScript.GFT)
@@ -34,6 +35,7 @@ func _on_House2_pressed():
 	clickInstance.position = get_local_mouse_position()
 	add_child(clickInstance)
 
+#Voegt Papier toe bij het tikken op gebouw 1
 func _on_House3_pressed():
 	GlobalScript.Paper += 1
 	$ControlFactory3/Paperlabel.text = str(GlobalScript.Paper)
@@ -60,7 +62,7 @@ func _on_PaperTimer_timeout():
 	GlobalScript.Paper += GlobalScript.PaperPerSecond
 	$ControlFactory3/Paperlabel.text = str(GlobalScript.Paper)
 
-
+#Slaat de nieuwe resources op in de save file
 func _on_SaveResourcesPerSec_timeout():
 	SaveScript.SaveFile("main", "Plastic", GlobalScript.Plastic)
 	SaveScript.SaveFile("main", "GFT", GlobalScript.GFT)
@@ -69,15 +71,15 @@ func _on_SaveResourcesPerSec_timeout():
 	SaveScript.SaveFile("main", "GFTPerSecond", GlobalScript.GFTPerSecond)
 	SaveScript.SaveFile("main", "PaperPerSecond", GlobalScript.PaperPerSecond)
 
-#questUI
+#Laat de UI zien waar een gebruiker een quest kan kiezen
 func _on_QuestButton_pressed():
 	$QuestControl/Quest.show()
 	
-	
+#Minimaliseert de UI zien waar een gebruiker een quest kan kiezen
 func _on_closeButton_pressed():
 	$QuestControl/Quest.hide()
 	
-	
+#Switcht van MainGame naar Quest scene als de Quest 1 knop wordt getikt
 func _on_Quest1_pressed():
 	get_tree().change_scene("res://QuestScene.tscn")
 
