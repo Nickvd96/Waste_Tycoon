@@ -25,7 +25,7 @@ func _on_House1_pressed():
 	clickInstance.position = get_local_mouse_position()
 	add_child(clickInstance)
 
-#Voegt GFT toe bij het tikken op gebouw 1
+#Voegt GFT toe bij het tikken op gebouw 2
 func _on_House2_pressed():
 	GlobalScript.GFT += 1
 	$ControlFactory2/GFTLabel.text = str (GlobalScript.GFT)
@@ -35,7 +35,7 @@ func _on_House2_pressed():
 	clickInstance.position = get_local_mouse_position()
 	add_child(clickInstance)
 
-#Voegt Papier toe bij het tikken op gebouw 1
+#Voegt Papier toe bij het tikken op gebouw 3
 func _on_House3_pressed():
 	GlobalScript.Paper += 1
 	$ControlFactory3/Paperlabel.text = str(GlobalScript.Paper)
@@ -75,7 +75,7 @@ func _on_SaveResourcesPerSec_timeout():
 func _on_QuestButton_pressed():
 	$QuestControl/Quest.show()
 	
-#Minimaliseert de UI zien waar een gebruiker een quest kan kiezen
+#Minimaliseert de UI waar een gebruiker een quest kan kiezen
 func _on_closeButton_pressed():
 	$QuestControl/Quest.hide()
 	
@@ -88,9 +88,10 @@ func _on_Quest1_pressed():
 
 
 
-#shop
+#Opent de shop bij een klik op de knop
 func _on_Openshop_pressed():
 	$ShopControl/PopupShop.show()
 
+#Sluit de shop bij een klik op het kruis
 func _on_CloseShop_pressed():
 	$ShopControl/PopupShop.hide()

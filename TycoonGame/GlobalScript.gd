@@ -21,6 +21,8 @@ func _ready():
 	PlasticPerSecond = SaveScript.LoadFile("main", "PlasticPerSecond", 0)
 	GFTPerSecond = SaveScript.LoadFile("main", "GFTPerSecond", 0)
 	PaperPerSecond = SaveScript.LoadFile("main", "PaperPerSecond", 0)
+	
+	#Voorkomen dat er niets staat in de savefile over resources per seconde, wat een error zou veroorzaken
 	if PlasticPerSecond <= 0 :
 		PlasticPerSecond = 1
 	if GFTPerSecond <= 0 :

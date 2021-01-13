@@ -1,24 +1,16 @@
 extends Node
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-#Geeft door aan de save file dat 'flesje' is opgeruimd in de quest
+#Geeft door aan de save file dat 'flesje' is opgeruimd in de quest, indien QuestScore 0, ga naar MainGame.
 func _on_BottleObject_pressed():
 	GlobalScript.QuestScore1 = GlobalScript.QuestScore1 -1
-	#print(GlobalScript.QuestScore1)
-	#print("Glas")
+
+	#Controleert of QuestScore gelijk is aan 0
 	if GlobalScript.QuestScore1 == 0 :
-		#print ("You have completed the quest!")
 		get_tree().change_scene("res://MainGame.tscn")
-		GlobalScript.Paper += 1000
+		GlobalScript.Paper += 2000
 		GlobalScript.QuestScore1 = 4
+	
+		#Vernietigd het object 'flesje'
 	self.queue_free()
 	return
 	
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
