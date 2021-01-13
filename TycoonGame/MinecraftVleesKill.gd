@@ -8,9 +8,10 @@ func _on_MinecraftVlees_pressed():
 	if GlobalScript.QuestScore1 == 0 :
 		get_tree().change_scene("res://MainGame.tscn")
 		GlobalScript.Paper += 2000
+		GlobalScript.GFT += 2000
+		GlobalScript.Plastic += 2000
 		GlobalScript.QuestScore1 = 4
-	
+
 	#Vernietigd het object 'vlees'
 	self.queue_free()
 	return
-

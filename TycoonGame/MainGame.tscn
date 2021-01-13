@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://Img/SkylineV5.png" type="Texture" id=1]
 [ext_resource path="res://Img/House1.png" type="Texture" id=2]
@@ -16,11 +16,12 @@
 [ext_resource path="res://Fonts/arial.ttf" type="DynamicFontData" id=14]
 [ext_resource path="res://Game Background Music.wav" type="AudioStream" id=15]
 [ext_resource path="res://Img/shopButton.png" type="Texture" id=16]
-[ext_resource path="res://favicon.png" type="Texture" id=17]
+[ext_resource path="res://Img/icons_UpgradeAnytime.png" type="Texture" id=17]
 [ext_resource path="res://Img/Quest_UI.png" type="Texture" id=18]
-[ext_resource path="res://Gasalt-Regular.ttf" type="DynamicFontData" id=19]
 [ext_resource path="res://Img/QuestNietBeschikbaar.png" type="Texture" id=20]
-[ext_resource path="res://UpgradePlastic.gd" type="Script" id=21]
+[ext_resource path="res://UpgradeShop.gd" type="Script" id=21]
+[ext_resource path="res://Clickingsound.wav" type="AudioStream" id=22]
+[ext_resource path="res://level_up.wav" type="AudioStream" id=23]
 
 [sub_resource type="DynamicFont" id=1]
 size = 56
@@ -35,15 +36,27 @@ size = 56
 font_data = ExtResource( 14 )
 
 [sub_resource type="DynamicFont" id=4]
-size = 150
+size = 120
 font_data = ExtResource( 14 )
 
 [sub_resource type="DynamicFont" id=5]
-size = 120
-font_data = ExtResource( 19 )
+size = 84
+font_data = ExtResource( 14 )
 
 [sub_resource type="DynamicFont" id=6]
+size = 112
+font_data = ExtResource( 14 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 96
+font_data = ExtResource( 14 )
+
+[sub_resource type="DynamicFont" id=8]
 size = 50
+font_data = ExtResource( 14 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 56
 font_data = ExtResource( 14 )
 
 [node name="Game" type="Node2D"]
@@ -69,7 +82,7 @@ __meta__ = {
 }
 
 [node name="ResourcesBarPlastic" type="Sprite" parent="UI"]
-position = Vector2( 792, 370 )
+position = Vector2( 1180, 401 )
 scale = Vector2( 0.80584, 0.80584 )
 texture = ExtResource( 4 )
 offset = Vector2( -484.499, -313.037 )
@@ -78,7 +91,7 @@ __meta__ = {
 }
 
 [node name="ResourcesBarGFT" type="Sprite" parent="UI"]
-position = Vector2( 1496, 354 )
+position = Vector2( 1884, 385 )
 scale = Vector2( 0.766925, 0.766925 )
 texture = ExtResource( 6 )
 offset = Vector2( -484.499, -313.037 )
@@ -87,7 +100,7 @@ __meta__ = {
 }
 
 [node name="ResourcesBarPaper" type="Sprite" parent="UI"]
-position = Vector2( 2232, 362 )
+position = Vector2( 2620, 393 )
 scale = Vector2( 0.788263, 0.788264 )
 texture = ExtResource( 7 )
 offset = Vector2( -484.499, -313.037 )
@@ -145,10 +158,10 @@ __meta__ = {
 }
 
 [node name="Plasticlabel" type="Label" parent="ControlFactory1"]
-anchor_left = 1.26326
-anchor_top = 0.121891
-anchor_right = 2.46094
-anchor_bottom = 0.196518
+anchor_left = 3.51907
+anchor_top = 0.196518
+anchor_right = 5.0714
+anchor_bottom = 0.28607
 margin_left = -31.2806
 margin_top = -71.0
 margin_right = 148.719
@@ -185,10 +198,10 @@ __meta__ = {
 }
 
 [node name="GFTLabel" type="Label" parent="ControlFactory2"]
-anchor_left = 4.31776
-anchor_top = 0.122436
-anchor_right = 5.65694
-anchor_bottom = 0.213346
+anchor_left = 6.58677
+anchor_top = 0.198194
+anchor_right = 7.92595
+anchor_bottom = 0.289104
 margin_left = -105.118
 margin_top = -71.5115
 margin_right = 39.8821
@@ -210,10 +223,10 @@ __meta__ = {
 }
 
 [node name="Paperlabel" type="Label" parent="ControlFactory3"]
-anchor_left = 7.10171
-anchor_top = 0.133944
-anchor_right = 8.21028
-anchor_bottom = 0.221111
+anchor_left = 9.31885
+anchor_top = 0.206583
+anchor_right = 10.4274
+anchor_bottom = 0.29375
 margin_left = -168.29
 margin_top = -60.9518
 margin_right = -33.29
@@ -265,31 +278,43 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="QuestControl/Quest"]
-position = Vector2( -132.29, 15.7146 )
-scale = Vector2( 0.791701, 0.621148 )
+position = Vector2( -201.701, -8.31254 )
+scale = Vector2( 0.747588, 0.597012 )
 texture = ExtResource( 18 )
 
 [node name="QuestGrey" type="Sprite" parent="QuestControl/Quest"]
-position = Vector2( -153.978, 142.866 )
-scale = Vector2( 0.738756, 0.688612 )
+position = Vector2( -224.561, 121.499 )
+scale = Vector2( 0.698708, 0.665843 )
 texture = ExtResource( 20 )
 
 [node name="Label" type="Label" parent="QuestControl/Quest/QuestGrey"]
-margin_left = -964.022
-margin_top = -106.169
-margin_right = 1398.98
-margin_bottom = 118.831
+margin_left = -790.342
+margin_top = -125.569
+margin_right = 1093.66
+margin_bottom = 9.43115
 custom_fonts/font = SubResource( 4 )
-text = "Deze Quest is nog niet beschikbaar"
+text = "Deze quest is nog niet beschikbaar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="QuestControl/Quest/QuestGrey"]
+margin_left = -528.138
+margin_top = 30.7527
+margin_right = 1030.86
+margin_bottom = 165.752
+custom_fonts/font = SubResource( 5 )
+text = "Check op een later moment terug!"
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="closeButton" type="TextureButton" parent="QuestControl/Quest"]
-margin_left = 844.092
-margin_top = 409.028
-margin_right = 1126.09
-margin_bottom = 691.028
+margin_left = 830.534
+margin_top = -574.009
+margin_right = 1046.53
+margin_bottom = -358.009
 texture_normal = ExtResource( 11 )
 expand = true
 __meta__ = {
@@ -297,21 +322,22 @@ __meta__ = {
 }
 
 [node name="UITitle" type="Label" parent="QuestControl/Quest"]
-margin_left = -463.521
-margin_top = -593.688
-margin_right = 56.4789
-margin_bottom = -392.688
-custom_fonts/font = SubResource( 5 )
-text = "QUEST"
+margin_left = -473.392
+margin_top = -575.299
+margin_right = 227.608
+margin_bottom = -430.299
+rect_pivot_offset = Vector2( 435.193, -513.026 )
+custom_fonts/font = SubResource( 6 )
+text = "Quests"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Quest1" type="TextureButton" parent="QuestControl/Quest"]
-margin_left = -1298.48
-margin_top = -393.488
-margin_right = 969.524
-margin_bottom = -41.488
+margin_left = -1298.0
+margin_top = -393.0
+margin_right = 836.0
+margin_bottom = -65.0
 texture_normal = ExtResource( 13 )
 expand = true
 __meta__ = {
@@ -319,45 +345,56 @@ __meta__ = {
 }
 
 [node name="QuestTitle1" type="Label" parent="QuestControl/Quest/Quest1"]
-margin_left = 631.236
-margin_top = 59.9636
-margin_right = 1529.24
-margin_bottom = 260.964
-custom_fonts/font = SubResource( 5 )
-text = "Sebastiaans concert"
+margin_left = 887.0
+margin_top = 69.0
+margin_right = 1490.0
+margin_bottom = 189.0
+custom_fonts/font = SubResource( 7 )
+text = "Fontys Purple"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Rewards" type="Label" parent="QuestControl/Quest/Quest1"]
-margin_left = 1927.09
-margin_top = 72.833
-margin_right = 2167.09
-margin_bottom = 129.833
-custom_fonts/font = SubResource( 6 )
-text = "200 plastic"
+margin_left = 1836.31
+margin_top = 66.8149
+margin_right = 2104.31
+margin_bottom = 123.815
+custom_fonts/font = SubResource( 8 )
+text = "2000 plastic"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Rewards2" type="Label" parent="QuestControl/Quest/Quest1"]
-margin_left = 1958.83
-margin_top = 168.077
-margin_right = 2198.83
-margin_bottom = 225.077
-custom_fonts/font = SubResource( 6 )
-text = "200 GFT"
+margin_left = 1838.05
+margin_top = 135.729
+margin_right = 2078.05
+margin_bottom = 192.729
+custom_fonts/font = SubResource( 8 )
+text = "2000 GFT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rewards3" type="Label" parent="QuestControl/Quest/Quest1"]
+margin_left = 1838.05
+margin_top = 203.729
+margin_right = 2093.05
+margin_bottom = 260.729
+custom_fonts/font = SubResource( 8 )
+text = "2000 paper"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="uitlegQuest" type="Label" parent="QuestControl/Quest/Quest1"]
-margin_left = 565.096
-margin_top = 168.077
-margin_right = 1694.1
-margin_bottom = 225.077
-custom_fonts/font = SubResource( 6 )
-text = "Ruim alle rotzooi op na het concert van sebastiaan"
+margin_left = 615.397
+margin_top = 186.48
+margin_right = 1744.4
+margin_bottom = 243.48
+custom_fonts/font = SubResource( 8 )
+text = "Ruim al het afval op van het Fontys Purple festival"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -367,55 +404,205 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-margin_left = -145.0
-margin_top = -102.0
-margin_right = -29.0
-margin_bottom = 65.0
+margin_left = 41.3279
+margin_top = -243.836
+margin_right = 152.328
+margin_bottom = -99.8365
+grow_horizontal = 2
+grow_vertical = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="PopupShop" type="PopupMenu" parent="ShopControl"]
-anchor_left = 0.5
-anchor_top = 0.454
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -101.5
-margin_top = -60.07
-margin_right = 218.5
-margin_bottom = 10.5
+[node name="PopupShop" type="PopupMenu" parent="."]
+margin_left = 104.735
+margin_top = -233.774
+margin_right = 424.735
+margin_bottom = -163.204
+grow_horizontal = 2
+grow_vertical = 2
 popup_exclusive = true
 submenu_popup_delay = 0.5
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite" type="Sprite" parent="ShopControl/PopupShop"]
-position = Vector2( 255.141, 143.816 )
+[node name="Control" type="Control" parent="PopupShop"]
+anchor_right = 0.278
+anchor_bottom = 1.565
+margin_left = 474.0
+margin_top = 577.0
+margin_right = 2257.04
+margin_bottom = 1415.56
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="PopupShop"]
+position = Vector2( 1406.23, 957.874 )
 scale = Vector2( 0.609341, 0.590189 )
 texture = ExtResource( 18 )
 
-[node name="CloseShop" type="TextureButton" parent="ShopControl/PopupShop"]
+[node name="CloseShop" type="TextureButton" parent="PopupShop"]
 anchor_left = -7.4
 anchor_top = -3.6
 anchor_right = -7.4
 anchor_bottom = -3.6
-margin_left = 3428.49
-margin_top = 1200.73
-margin_right = 3646.49
-margin_bottom = 1389.73
+margin_left = 4613.0
+margin_top = 695.052
+margin_right = 4793.0
+margin_bottom = 884.052
+grow_horizontal = 2
+grow_vertical = 2
 texture_normal = ExtResource( 11 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="UpgradePlastic" type="TextureButton" parent="ShopControl/PopupShop"]
-margin_right = 418.0
-margin_bottom = 400.0
+[node name="UpgradePlastic" type="TextureButton" parent="PopupShop"]
+anchor_left = -1.76
+anchor_top = -2.729
+anchor_right = -0.454
+anchor_bottom = 2.382
+margin_left = 1147.96
+margin_top = 959.903
+margin_right = 1259.04
+margin_bottom = 1084.22
+rect_pivot_offset = Vector2( 529, 0 )
 texture_normal = ExtResource( 17 )
 expand = true
+stretch_mode = 4
 script = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Levelupsound" type="AudioStreamPlayer" parent="PopupShop/UpgradePlastic"]
+stream = ExtResource( 23 )
+
+[node name="Label" type="Label" parent="PopupShop"]
+margin_left = 688.569
+margin_top = 1292.34
+margin_right = 964.569
+margin_bottom = 1355.34
+rect_pivot_offset = Vector2( 435.193, -513.026 )
+custom_fonts/font = SubResource( 9 )
+text = "Level 1 > 2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label7" type="Label" parent="PopupShop"]
+margin_left = 1008.43
+margin_top = 386.941
+margin_right = 1709.43
+margin_bottom = 531.941
+rect_pivot_offset = Vector2( 435.193, -513.026 )
+custom_fonts/font = SubResource( 6 )
+text = "Upgrade shop"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="PopupShop"]
+margin_left = 594.815
+margin_top = 662.382
+margin_right = 1082.81
+margin_bottom = 725.382
+rect_pivot_offset = Vector2( 530.947, 116.935 )
+custom_fonts/font = SubResource( 9 )
+text = "Plastic per seconde"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UpgradeGFT" type="TextureButton" parent="PopupShop"]
+anchor_left = -1.76
+anchor_top = -2.729
+anchor_right = -0.454
+anchor_bottom = 2.382
+margin_left = 1702.33
+margin_top = 964.943
+margin_right = 1813.41
+margin_bottom = 1089.26
+rect_pivot_offset = Vector2( 529, 0 )
+texture_normal = ExtResource( 17 )
+expand = true
+stretch_mode = 4
+script = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Levelupsound" type="AudioStreamPlayer" parent="PopupShop/UpgradeGFT"]
+stream = ExtResource( 23 )
+
+[node name="Label3" type="Label" parent="PopupShop"]
+margin_left = 1248.93
+margin_top = 1297.38
+margin_right = 1524.93
+margin_bottom = 1360.38
+rect_pivot_offset = Vector2( 435.193, -513.026 )
+custom_fonts/font = SubResource( 9 )
+text = "Level 1 > 2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="PopupShop"]
+margin_left = 1174.72
+margin_top = 664.48
+margin_right = 1610.72
+margin_bottom = 727.48
+rect_pivot_offset = Vector2( 530.947, 116.935 )
+custom_fonts/font = SubResource( 9 )
+text = "GFT per seconde"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UpgradePaper" type="TextureButton" parent="PopupShop"]
+anchor_left = -1.76
+anchor_top = -2.729
+anchor_right = -0.454
+anchor_bottom = 2.382
+margin_left = 2261.73
+margin_top = 962.423
+margin_right = 2372.81
+margin_bottom = 1086.74
+rect_pivot_offset = Vector2( 529, 0 )
+texture_normal = ExtResource( 17 )
+expand = true
+stretch_mode = 4
+script = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Levelupsound" type="AudioStreamPlayer" parent="PopupShop/UpgradePaper"]
+stream = ExtResource( 23 )
+
+[node name="Label5" type="Label" parent="PopupShop"]
+margin_left = 1804.34
+margin_top = 1294.86
+margin_right = 2080.34
+margin_bottom = 1357.86
+rect_pivot_offset = Vector2( 435.193, -513.026 )
+custom_fonts/font = SubResource( 9 )
+text = "Level 1 > 2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Label" parent="PopupShop"]
+margin_left = 1710.58
+margin_top = 662.383
+margin_right = 2198.58
+margin_bottom = 725.383
+rect_pivot_offset = Vector2( 530.947, 116.935 )
+custom_fonts/font = SubResource( 9 )
+text = "Papier per seconde"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -434,13 +621,17 @@ autostart = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 15 )
-volume_db = -5.048
+volume_db = 1.01
+autoplay = true
+
+[node name="Clickingsound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 22 )
 
 [node name="Openshop" type="TextureButton" parent="."]
-margin_left = 2457.76
-margin_top = 43.665
-margin_right = 2724.76
-margin_bottom = 310.665
+margin_left = 63.9597
+margin_top = 22.1406
+margin_right = 330.96
+margin_bottom = 289.141
 texture_normal = ExtResource( 16 )
 expand = true
 __meta__ = {
@@ -452,10 +643,10 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-margin_left = 2836.22
-margin_top = 19.1041
-margin_right = 2999.22
-margin_bottom = 331.104
+margin_left = 2804.05
+margin_top = -6.59512
+margin_right = 2967.05
+margin_bottom = 305.405
 texture_normal = ExtResource( 12 )
 expand = true
 __meta__ = {
@@ -466,8 +657,10 @@ __meta__ = {
 [connection signal="pressed" from="ControlFactory3/House3" to="." method="_on_House3_pressed"]
 [connection signal="pressed" from="QuestControl/Quest/closeButton" to="." method="_on_closeButton_pressed"]
 [connection signal="pressed" from="QuestControl/Quest/Quest1" to="." method="_on_Quest1_pressed"]
-[connection signal="pressed" from="ShopControl/PopupShop/CloseShop" to="." method="_on_CloseShop_pressed"]
-[connection signal="pressed" from="ShopControl/PopupShop/UpgradePlastic" to="ShopControl/PopupShop/UpgradePlastic" method="_on_UpgradePlastic_pressed"]
+[connection signal="pressed" from="PopupShop/CloseShop" to="." method="_on_CloseShop_pressed"]
+[connection signal="pressed" from="PopupShop/UpgradePlastic" to="PopupShop/UpgradePlastic" method="_on_UpgradePlastic_pressed"]
+[connection signal="pressed" from="PopupShop/UpgradeGFT" to="PopupShop/UpgradeGFT" method="_on_UpgradeGFT_pressed"]
+[connection signal="pressed" from="PopupShop/UpgradePaper" to="PopupShop/UpgradePaper" method="_on_UpgradePaper_pressed"]
 [connection signal="timeout" from="PlasticTimer" to="." method="_on_PlasticTimer_timeout"]
 [connection signal="timeout" from="GFTTimer" to="." method="_on_GFTTimer_timeout"]
 [connection signal="timeout" from="PaperTimer" to="." method="_on_PaperTimer_timeout"]

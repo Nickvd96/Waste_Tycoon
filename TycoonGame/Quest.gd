@@ -1,5 +1,5 @@
 extends Node
-
+#wordt niet gebruikt, kan waarschijnlijk verwijderd worden
 onready var available_quests = $Available
 onready var active_quests = $Active
 onready var completed_quests = $Completed

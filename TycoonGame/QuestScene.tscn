@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Img/QuestSceneBG.png" type="Texture" id=1]
+[ext_resource path="res://Img/552809__bangcorrupt__chilled-loop.ogg" type="AudioStream" id=2]
 [ext_resource path="res://QuestChoice.gd" type="Script" id=3]
 [ext_resource path="res://Fonts/arial.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Img/DummyButtonQuest.png" type="Texture" id=5]
@@ -78,12 +79,12 @@ scale = Vector2( 0.622535, 0.622535 )
 texture = ExtResource( 1 )
 
 [node name="QuestExplain" type="Label" parent="."]
-margin_left = 545.874
-margin_top = 796.028
-margin_right = 2477.87
-margin_bottom = 1122.03
+margin_left = 495.276
+margin_top = 796.0
+margin_right = 2528.28
+margin_bottom = 1122.0
 custom_fonts/font = SubResource( 1 )
-text = "Our city is a mess! The concert ruined everything! Can you help out?"
+text = "Er ligt overal rommel! Het Purple festival heeft de schone stad verpest! Kan je helpen?"
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -104,12 +105,12 @@ __meta__ = {
 }
 
 [node name="Deny" type="Label" parent="ExitButton"]
-margin_left = 123.454
-margin_top = 61.4543
-margin_right = 1000.45
-margin_bottom = 174.454
+margin_left = 48.4297
+margin_top = 71.6787
+margin_right = 1085.43
+margin_bottom = 184.679
 custom_fonts/font = SubResource( 3 )
-text = "I'm currently busy..."
+text = "Ik heb het nogal druk..."
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -130,16 +131,21 @@ __meta__ = {
 }
 
 [node name="Accept" type="Label" parent="QuestStart"]
-margin_left = 218.999
-margin_top = 63.0
-margin_right = 830.999
-margin_bottom = 204.0
+margin_left = 301.76
+margin_top = 65.6697
+margin_right = 747.76
+margin_bottom = 193.67
 custom_fonts/font = SubResource( 3 )
-text = "Sure, I'll help!"
+text = "Natuurlijk!"
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -8.078
+autoplay = true
 [connection signal="timeout" from="PlasticTimer" to="." method="_on_PlasticTimer_timeout"]
 [connection signal="timeout" from="GFTTimer" to="." method="_on_GFTTimer_timeout"]
 [connection signal="timeout" from="PaperTimer" to="." method="_on_PaperTimer_timeout"]

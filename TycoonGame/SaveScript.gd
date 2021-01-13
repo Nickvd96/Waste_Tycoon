@@ -5,7 +5,7 @@ var config = ConfigFile.new()
 var loadResponse = config.load(savePath)
 
 #section = voor welk gedeelte ermoet worden opgeslagen bv speler gegevens
-#key = de naam van wat er meot worden opgeslagen
+#key = de naam van wat er moet worden opgeslagen
 #value = de waarde die moet worden opgeslagen
 
 func SaveFile(section, key, value):
