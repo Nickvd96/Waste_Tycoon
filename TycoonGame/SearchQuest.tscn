@@ -42,10 +42,10 @@ scale = Vector2( 1.97831, 1.97831 )
 texture = ExtResource( 2 )
 
 [node name="CanObject" type="TextureButton" parent="."]
-margin_left = 1149.44
-margin_top = 895.676
-margin_right = 1246.44
-margin_bottom = 992.676
+margin_left = 1149.0
+margin_top = 896.0
+margin_right = 1252.0
+margin_bottom = 1003.0
 rect_rotation = 102.444
 texture_normal = ExtResource( 1 )
 expand = true
@@ -55,10 +55,10 @@ __meta__ = {
 }
 
 [node name="BottleObject" type="TextureButton" parent="."]
-margin_left = 1161.01
-margin_top = 1380.69
-margin_right = 1180.01
-margin_bottom = 1407.69
+margin_left = 1601.0
+margin_top = 1174.0
+margin_right = 1686.0
+margin_bottom = 1302.0
 rect_rotation = 78.8806
 texture_normal = ExtResource( 5 )
 expand = true
@@ -68,10 +68,10 @@ __meta__ = {
 }
 
 [node name="PaperObject" type="TextureButton" parent="."]
-margin_left = 2608.0
+margin_left = 2570.0
 margin_top = 894.0
 margin_right = 2644.0
-margin_bottom = 932.0
+margin_bottom = 954.0
 texture_normal = ExtResource( 4 )
 expand = true
 script = ExtResource( 10 )
@@ -80,10 +80,10 @@ __meta__ = {
 }
 
 [node name="MinecraftVlees" type="TextureButton" parent="."]
-margin_left = 2052.0
-margin_top = 862.0
-margin_right = 2082.0
-margin_bottom = 892.0
+margin_left = 2305.55
+margin_top = 469.0
+margin_right = 2365.55
+margin_bottom = 533.0
 texture_normal = ExtResource( 3 )
 expand = true
 script = ExtResource( 8 )
